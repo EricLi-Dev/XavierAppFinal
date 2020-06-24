@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1372591924A3F60000364C14 /* XavierAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372591824A3F60000364C14 /* XavierAppApp.swift */; };
-		1372591B24A3F60000364C14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372591A24A3F60000364C14 /* ContentView.swift */; };
+		1372591B24A3F60000364C14 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372591A24A3F60000364C14 /* BackgroundView.swift */; };
 		1372591D24A3F60100364C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591C24A3F60100364C14 /* Assets.xcassets */; };
 		1372592024A3F60100364C14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591F24A3F60100364C14 /* Preview Assets.xcassets */; };
 		1372592B24A3F60100364C14 /* XavierAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372592A24A3F60100364C14 /* XavierAppTests.swift */; };
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		1372591524A3F60000364C14 /* XavierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XavierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1372591824A3F60000364C14 /* XavierAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppApp.swift; sourceTree = "<group>"; };
-		1372591A24A3F60000364C14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1372591A24A3F60000364C14 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		1372591C24A3F60100364C14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1372591F24A3F60100364C14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1372592124A3F60100364C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				1372591824A3F60000364C14 /* XavierAppApp.swift */,
-				1372591A24A3F60000364C14 /* ContentView.swift */,
+				1372591A24A3F60000364C14 /* BackgroundView.swift */,
 				1372591C24A3F60100364C14 /* Assets.xcassets */,
 				1372592124A3F60100364C14 /* Info.plist */,
 				1372591E24A3F60100364C14 /* Preview Content */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1372591B24A3F60000364C14 /* ContentView.swift in Sources */,
+				1372591B24A3F60000364C14 /* BackgroundView.swift in Sources */,
 				1372591924A3F60000364C14 /* XavierAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
