@@ -13,6 +13,7 @@
 		1372592024A3F60100364C14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591F24A3F60100364C14 /* Preview Assets.xcassets */; };
 		1372592B24A3F60100364C14 /* XavierAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372592A24A3F60100364C14 /* XavierAppTests.swift */; };
 		1372593624A3F60100364C14 /* XavierAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372593524A3F60100364C14 /* XavierAppUITests.swift */; };
+		A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78BF1E224A404810008C7FC /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		1372593124A3F60100364C14 /* XavierAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XavierAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1372593524A3F60100364C14 /* XavierAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppUITests.swift; sourceTree = "<group>"; };
 		1372593724A3F60100364C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A78BF1E224A404810008C7FC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				1372591824A3F60000364C14 /* XavierAppApp.swift */,
+				A78BF1E224A404810008C7FC /* OnboardingView.swift */,
 				1372591A24A3F60000364C14 /* BackgroundView.swift */,
 				1372591C24A3F60100364C14 /* Assets.xcassets */,
 				1372592124A3F60100364C14 /* Info.plist */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */,
 				1372591B24A3F60000364C14 /* BackgroundView.swift in Sources */,
 				1372591924A3F60000364C14 /* XavierAppApp.swift in Sources */,
 			);
