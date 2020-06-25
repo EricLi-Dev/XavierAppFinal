@@ -11,8 +11,8 @@ import SwiftUI
 struct XavierAppApp: App {
     var body: some Scene {
         WindowGroup {
-
-            BackgroundView()
+            OnboardingView()
+            //BackgroundView()
         }
     }
 }
