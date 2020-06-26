@@ -102,7 +102,7 @@ struct Pages: View {
                                     .padding(.leading)
                                     
                                     .multilineTextAlignment(.center)
-                                    .animation(Animation.interpolatingSpring(stiffness: 40, damping: 7).delay(0.1))
+                                    .animation(Animation.interpolatingSpring( stiffness: 10, damping: 30, initialVelocity: 5).delay(0.1))
                                 HStack{
                                 Text("  ")
                                 TextField("John Lee", text: $username)
@@ -113,7 +113,7 @@ struct Pages: View {
                                     .background(RoundedRectangle(cornerRadius: 10, style: .continuous))
                                     .foregroundColor(Color.white)
                                     .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.blue, lineWidth: 1))
-                                    .animation(Animation.interpolatingSpring(stiffness: 40, damping: 7).delay(0.1))
+                                    .animation(Animation.interpolatingSpring( stiffness: 10, damping: 30, initialVelocity: 5).delay(0.1))
                                 }
                 
                             }.frame(width: gr.frame(in: .global).width)
