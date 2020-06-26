@@ -444,7 +444,7 @@
 				CODE_SIGN_ENTITLEMENTS = XavierApp/XavierApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"XavierApp/Preview Content\"";
-				DEVELOPMENT_TEAM = B9K3VJMSNM;
+				DEVELOPMENT_TEAM = SVAHMLZR95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = XavierApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -452,7 +452,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp;
+				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -468,7 +468,7 @@
 				CODE_SIGN_ENTITLEMENTS = XavierApp/XavierApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"XavierApp/Preview Content\"";
-				DEVELOPMENT_TEAM = B9K3VJMSNM;
+				DEVELOPMENT_TEAM = SVAHMLZR95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = XavierApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -476,7 +476,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp;
+				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
