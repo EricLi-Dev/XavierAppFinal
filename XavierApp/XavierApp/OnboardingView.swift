@@ -127,7 +127,7 @@ struct PageOne: View {
                             .animation(Animation.interpolatingSpring( stiffness: 10, damping: 30, initialVelocity: 5).delay(0.1))
                                
                                 
-                        TextField("John Lee", text: $username)
+                        TextField("Tyler Wing Wong", text: $username)
                             .foregroundColor(.black)//Black Text
                             .padding(10)
                             .border(Color("Blue"))
@@ -186,7 +186,11 @@ struct PageOne: View {
                     
                     ZStack{
                         //Next Button
-                        NavigationLink(destination: PageTwo().navigationBarBackButtonHidden(true)){
+                        NavigationLink(
+                            destination: PageTwo()
+                                .navigationBarBackButtonHidden(true)
+                                .navigationBarTitle("")
+                                .navigationBarHidden(true)){
                             Text("Next")
                             Image(systemName: "chevron.right")
                         }
@@ -234,109 +238,161 @@ struct PageTwo: View {
     var body: some View {
         NavigationView{
             
-            ZStack{
-                //sets background color to Maroon
-                Color
-                    .init(red: 132/255, green: 49/255, blue: 80/255)
-                    .edgesIgnoringSafeArea(.all)
-                
-                
-                VStack(){
-                    Text("Getting Started")
-                        .bold()
-                        .position(x: 210, y: -195)
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                    
+            VStack{
+                                
+                ZStack(){
+                        //Background Color
+                        ZStack{
+                        Color
+                            .init(red: 132/255, green: 49/255, blue: 80/255)
+                            .edgesIgnoringSafeArea(.all)
+                        }
+                        
+                        
                     GeometryReader { gr in
-                            HStack{
-                                //Parent or Student Page
-                                VStack(){
+                        VStack{
+                            //2nd Page
+                            ZStack{
+                                Text("Getting Started")
+                                    .bold()
+                                    //.position(x: 210, y: -100)
+                                    .font(.largeTitle)
+                                    .foregroundColor(.white)
+                                    
+                                }
+                                //.background(Color.purple)
+                                .frame(width: gr.size.width, height: gr.size.height/4)
+                                Divider()
+                                Divider()
+                            
+                               
+                                    
+                            ZStack(){
+                                VStack{
+                                VStack{
                                     Text("I am a")
                                         .foregroundColor(Color.white)
                                         .font(.system(size: 60))
                                         .padding(.leading)
                                         .fixedSize(horizontal: false, vertical: true)
-                                        .position(x: 200, y: -250)
+//                                        .position(x: 200, y: -250)
                                         .multilineTextAlignment(.center)
                                         .animation(Animation.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2).delay(0.1))
-                                    VStack{
+                                    
+                                }
+                                
+                                VStack{
                                     Button(action: {
                                         self.parent.toggle()
                                     }) {
                                         Text("Parent")
                                             .padding()
-                                    }.animation(Animation.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2).delay(0.1))
-                                    
+                                    }
+                                    .padding(.horizontal)
+                                    .padding()
+                                    .accentColor(Color.white)
+                                    .background(Capsule().fill(Color("Blue")))
+                                    .opacity(1)
+                                    .animation(Animation.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2).delay(0.1))
+
                                     Button(action: {
                                         self.student.toggle()
                                     }) {
                                         Text("Student")
-                                            .padding()
-                                    }.animation(Animation.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2).delay(0.1))
+                                        .padding()
                                     }
-                                    .position(x: 200, y: -250)
-                    
+                                    .padding(.horizontal)
+                                    .padding()
+                                    .accentColor(Color.white)
+                                    .background(Capsule().fill(Color("Blue")))
+                                    .opacity(1)
+                                    .animation(Animation.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2).delay(0.1))
+                               
+                                    }
+                                    
                                 }
                             }
+                                //.background(Color.pink)
+                                .frame(width: gr.size.width, height: gr.size.height/3)
+                           
+                            VStack{
+                            ZStack{
+                                    
+                                //1..2...3.... buttons
+                                HStack(){
+                                    Button(action: {
+                                         
+                                    }) {
+                                        Image(systemName: "1.circle")
+                                            .padding()
+                                            .scaleEffect(0.65)
+                                    }
+                                    Button(action: {
+
+                                    }) {
+                                        Image(systemName: "2.circle")
+                                            .padding()
+                                            .scaleEffect(1)
+                                    }
+                                    Button(action: {
+
+                                    }) {
+                                        Image(systemName: "3.circle")
+                                            .padding()
+                                            .scaleEffect(0.65)
+                                    }
+                                        
+                                }
+                                .animation(.spring(response: 0.4, dampingFraction: 0.5))
+                                .font(.largeTitle)
+                                .accentColor(Color.white)
+                            }
+                            }
+                            //.background(Color.red)
+                            .frame(width: gr.size.width, height: gr.size.height/4)
+                            
+                            ZStack{
+                                //Next Button
+                                NavigationLink(
+                                    destination: PageThree()
+                                        .navigationBarBackButtonHidden(true)
+                                        .navigationBarTitle("")
+                                        .navigationBarHidden(true)){
+                                    Text("Next")
+                                    Image(systemName: "chevron.right")
+                                }
+                                .padding(.horizontal)
+                                .padding()
+                                .accentColor(Color.white)
+                                .background(Capsule().fill(Color("Blue")))
+                                .opacity(1)
+                                .animation(.none)
+                                .scaleEffect(1)
+                                //.position(x: 210, y: 100)
+                                .animation(Animation.interpolatingSpring(stiffness: 50, damping: 10, initialVelocity: 10))
+                        
+                            }
+                            //.background(Color.green)
+                            .frame(width: gr.size.width, height: gr.size.height/25)
+                                    
+                        
+                        
+                        
+                                
+                                
+                                
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                    .hiddenNavigationBarStyle()
                     
-                }
-                
-            }
-            .multilineTextAlignment(.center)
-            .foregroundColor(Color.white)
-            .font(.title)
-            //.frame(width: gr.frame(in: .global).width * 3)
-            .animation(Animation.interpolatingSpring(stiffness: 40, damping: 7))
-                
-                Divider()
-                
-                //1..2...3.... buttons
-                HStack(spacing: 20){
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "1.circle")
-                            .padding()
-                            .scaleEffect(0.65)
-                    }
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "2.circle")
-                            .padding()
-                            .scaleEffect(1)
-                    }
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "3.circle")
-                            .padding()
-                            .scaleEffect(0.65)
-                    }
                     
+                       
+                       
+                          
+                    }
+                        
                 }
-                .animation(.spring(response: 0.4, dampingFraction: 0.5))
-                .font(.largeTitle)
-                .accentColor(Color.white)
-                .position(x: 210, y: 150)
-                .animation(.spring(response: 0.4, dampingFraction: 0.5))
-                .font(.largeTitle)
-                .accentColor(Color.white)
             
-            NavigationLink(destination: PageThree().navigationBarBackButtonHidden(true)){
-                Text("Next")
-                Image(systemName: "chevron.right")
-            }
-            .padding(.horizontal)
-            .padding()
-            .accentColor(Color.white)
-            .background(Capsule().fill(Color("Blue")))
-            .opacity(1)
-            .animation(.none)
-            .scaleEffect(1)
-            .animation(Animation.interpolatingSpring(stiffness: 50, damping: 10, initialVelocity: 10))
-        }
     }
 }
 }
@@ -345,80 +401,119 @@ struct PageThree: View {
     var body: some View {
         NavigationView{
             
-            ZStack{
-                //sets background color to Maroon
-                Color
-                    .init(red: 132/255, green: 49/255, blue: 80/255)
-                    .edgesIgnoringSafeArea(.all)
-                
-                
-                VStack(spacing: 30){
-                    Text("Getting Started")
-                        .font(.largeTitle)
-                        .foregroundColor(.white)
-                        .bold()
-                    
+            VStack{
+                                
+                ZStack(){
+                        //Background Color
+                        ZStack{
+                        Color
+                            .init(red: 132/255, green: 49/255, blue: 80/255)
+                            .edgesIgnoringSafeArea(.all)
+                        }
+                        
+                        
                     GeometryReader { gr in
-                            HStack{
-                                //CameraView Page
-                                VStack(spacing: 40){
+                        VStack{
+                            //2nd Page
+                            ZStack{
+                                Text("Getting Started")
+                                    .bold()
+                                    //.position(x: 210, y: -100)
+                                    .font(.largeTitle)
+                                    .foregroundColor(.white)
                                     
-                                    Text("Camera View Page")
-                                                                    
-                    
+                                }
+                                //.background(Color.purple)
+                                .frame(width: gr.size.width, height: gr.size.height/4)
+                                Divider()
+                                Divider()
+                            
+                               
+                                    
+                            ZStack(){
+                                VStack{
+                                    
+                                    
                                 }
                             }
+                                //.background(Color.pink)
+                                .frame(width: gr.size.width, height: gr.size.height/3)
+                           
+                            VStack{
+                            ZStack{
+                                    
+                                //1..2...3.... buttons
+                                HStack(){
+                                    Button(action: {
+                                         
+                                    }) {
+                                        Image(systemName: "1.circle")
+                                            .padding()
+                                            .scaleEffect(0.65)
+                                    }
+                                    Button(action: {
+
+                                    }) {
+                                        Image(systemName: "2.circle")
+                                            .padding()
+                                            .scaleEffect(0.65)
+                                    }
+                                    Button(action: {
+
+                                    }) {
+                                        Image(systemName: "3.circle")
+                                            .padding()
+                                            .scaleEffect(1)
+                                    }
+                                        
+                                }
+                                .animation(.spring(response: 0.4, dampingFraction: 0.5))
+                                .font(.largeTitle)
+                                .accentColor(Color.white)
+                            }
+                            }
+                            //.background(Color.red)
+                            .frame(width: gr.size.width, height: gr.size.height/4)
+                            
+                            ZStack{
+                                //Next Button
+                                NavigationLink(destination: PageThree().navigationBarBackButtonHidden(true)){
+                                    Text("Next")
+                                    Image(systemName: "chevron.right")
+                                }
+                                .padding(.horizontal)
+                                .padding()
+                                .accentColor(Color.white)
+                                .background(Capsule().fill(Color("Blue")))
+                                .opacity(1)
+                                .animation(.none)
+                                .scaleEffect(1)
+                                //.position(x: 210, y: 100)
+                                .animation(Animation.interpolatingSpring(stiffness: 50, damping: 10, initialVelocity: 10))
+                        
+                            }
+                            //.background(Color.green)
+                            .frame(width: gr.size.width, height: gr.size.height/25)
+                                    
+                        
+                        
+                        
+                                
+                                
+                                
+                    }
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                    .hiddenNavigationBarStyle()
                     
-                }
-                
-            }
-        
-                //1..2...3.... buttons
-                HStack(spacing: 20){
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "1.circle")
-                            .padding()
-                            .scaleEffect(0.65)
-                    }
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "2.circle")
-                            .padding()
-                            .scaleEffect(0.65)
-                    }
-                    Button(action: {
-                        
-                    }) {
-                        Image(systemName: "3.circle")
-                            .padding()
-                            .scaleEffect(1)
-                    }
                     
+                       
+                       
+                          
+                    }
+                        
                 }
-                .animation(.spring(response: 0.4, dampingFraction: 0.5))
-                .font(.largeTitle)
-                .accentColor(Color.white)
             
-            NavigationLink(
-                //Change destination to Main View
-                destination:
-                PageOne().navigationBarBackButtonHidden(true)){
-                Text("Continue")
-                Image(systemName: "chevron.right")
-            }
-            .padding(.horizontal)
-            .padding()
-            .accentColor(Color.white)
-            .background(Capsule().fill(Color("Blue")))
-            .opacity(1)
-            .animation(.none)
-            .scaleEffect(1)
-            .animation(Animation.interpolatingSpring(stiffness: 50, damping: 10, initialVelocity: 10))
-            
-        }
+    }
     }
 }
 }
@@ -432,3 +527,4 @@ struct OnboardingView_Previews: PreviewProvider {
     }
 }
 
+}
