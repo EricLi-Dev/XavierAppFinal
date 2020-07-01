@@ -97,34 +97,6 @@ struct PageOne: View {
                     .edgesIgnoringSafeArea(.all)
                 }
                 
-<<<<<<< HEAD
-                GeometryReader { gr in
-                        HStack{
-                            //1st Page
-                            VStack(spacing: 40){
-                                Spacer().frame(height: 60)
-                                Text("What is your name?                                                                        ")
-                                    .foregroundColor(Color.white)
-                                    .font(.system(size: 60))
-                                    .padding(.leading)
-                                    
-                                    .multilineTextAlignment(.center)
-                                    .animation(Animation.interpolatingSpring( stiffness: 10, damping: 30, initialVelocity: 5).delay(0.1))
-                                HStack{
-                                Text("  ")
-                                TextField("John Lee", text: $username)
-                                    .padding(10)
-                                    .multilineTextAlignment(.center)
-                                    .frame(width: 200, height: nil)
-                                    .frame(alignment: .leading)
-                                    .background(RoundedRectangle(cornerRadius: 10, style: .continuous))
-                                    .foregroundColor(Color.white)
-                                    .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(Color.blue, lineWidth: 1))
-                                    .animation(Animation.interpolatingSpring( stiffness: 10, damping: 30, initialVelocity: 5).delay(0.1))
-                                }
-=======
->>>>>>> 413bda027d626e5258092423171df645af73b8f4
-                
             GeometryReader { gr in
                 VStack{
                     //1st Page
@@ -400,7 +372,7 @@ struct PageTwo: View {
                         
                             }
                             //.background(Color.green)
-                            .frame(width: gr.size.width, height: gr.size.height/25)
+                            .frame(width: gr.size.width, height: gr.size.height/30)
                                     
                         
                         
@@ -504,7 +476,7 @@ struct PageThree: View {
                             
                             ZStack{
                                 //Next Button
-                                NavigationLink(destination: PageThree().navigationBarBackButtonHidden(true)){
+                                NavigationLink(destination: mainView().navigationBarBackButtonHidden(true)){
                                     Text("Next")
                                     Image(systemName: "chevron.right")
                                 }

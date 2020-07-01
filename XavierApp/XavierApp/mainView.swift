@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 extension View {
     func animate(using animation: Animation = Animation.easeOut(duration: 1), autoreverses: Bool = false, _ action: @escaping () -> Void) -> some View {
         let repeated = animation
@@ -49,7 +50,11 @@ struct mainView: View {
                     mainTextView()
                 }
                 
-            }.foregroundColor(.white)
+            }
+            .hiddenNavigationBarStyle()
+            .foregroundColor(.white)
+            
+            
         }
 }
 
