@@ -1,23 +1,22 @@
 import SwiftUI
 
-struct ContentView: View {
+struct cardView: View {
     var body: some View {
            
     ZStack{
-        Color
-            .init(red: 132/255, green: 49/255, blue: 80/255)
-            .edgesIgnoringSafeArea(.all)
-    
-    Spacer()
-        Text("").padding()
-    Spacer()
+//        Color
+//            .init(red: 132/255, green: 49/255, blue: 80/255)
+//            .edgesIgnoringSafeArea(.all)
+//
+//    Spacer()
+//        Text("").padding()
+//    Spacer()
     
     CarouselView(itemHeight: 450,
         views: [
             AnyView(Text("Lunch")),
             AnyView(Text("Schedule")),
-            AnyView(Text("Calendar"))
-            
+            AnyView(Text("Calendar")),
         
         
         
@@ -26,9 +25,9 @@ struct ContentView: View {
 }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct cardView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        cardView()
     }
 }
 

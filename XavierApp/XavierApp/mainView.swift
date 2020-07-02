@@ -41,20 +41,39 @@ struct mainView: View {
         var body: some View {
             ZStack {
                 
-                backgroundView()
-                VStack {
-                    HStack(spacing: (UIScreen.main.bounds.size.width/4)*2.75)  {
-                        menuButtonView()
-                        warningButtonView();
+                
+                ZStack{
+                    backgroundView()
+                    VStack {
+                        HStack(spacing:     (UIScreen.main.bounds.size  .width/4)*2.75)  {
+                            menuButtonView()
+                            warningButtonView();
+                        }
+                        mainTextView()
                     }
-                    mainTextView()
                 }
                 
+            VStack{
+            Spacer()
+                Text("")
+                    .padding(115)
+            Spacer()
+            
+            CarouselView(itemHeight: 450,
+                views: [
+                    AnyView(Text("Lunch")),
+                    AnyView(Text("Schedule")),
+                    AnyView(Text("Calendar"))
+                
+                
+                
+                
+                ])
             }
-            .hiddenNavigationBarStyle()
-            .foregroundColor(.white)
-            
-            
+        }
+        .hiddenNavigationBarStyle()
+          
+        
         }
 }
 
