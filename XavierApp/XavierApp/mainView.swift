@@ -8,9 +8,6 @@
 import SwiftUI
 
 
-
-
-
 struct mainView: View {
     
     @State var scale1: CGFloat = 0
@@ -29,7 +26,11 @@ struct mainView: View {
                     mainTextView()
                 }
                 
-            }.foregroundColor(.white)
+            }
+            .hiddenNavigationBarStyle()
+            .foregroundColor(.white)
+            
+            
         }
 }
 
