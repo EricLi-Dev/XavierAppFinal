@@ -7,9 +7,33 @@
 
 import SwiftUI
 
+extension View {
+    func animate(using animation: Animation = Animation.easeOut(duration: 1), autoreverses: Bool = false, _ action: @escaping () -> Void) -> some View {
+        let repeated = animation
+
+        return onAppear {
+            withAnimation(repeated) {
+                action()
+                
+            }
+        }
+    }
+    func animateIn(using animation: Animation = Animation.easeIn(duration: 1), autoreverses: Bool = false, _ action: @escaping () -> Void) -> some View {
+        let repeated = animation
+
+        return onAppear {
+            withAnimation(repeated) {
+                action()
+                
+            }
+        }
+    }
+}
+
 struct backgroundView: View {
     @State var scale: CGFloat = 0
     var body: some View {
+        
         Circle()
             .fill(Color(red: 132/255, green: 49/255, blue: 80/255))
             .offset(x: 0, y: 75.0)

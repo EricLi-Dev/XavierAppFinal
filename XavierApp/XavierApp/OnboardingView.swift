@@ -97,6 +97,7 @@ struct PageOne: View {
                     .edgesIgnoringSafeArea(.all)
                 }
                 
+
             GeometryReader { gr in
                 VStack{
                     //1st Page
