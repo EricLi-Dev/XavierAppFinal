@@ -4,23 +4,38 @@ struct cardView: View {
     var body: some View {
            
     ZStack{
-//        Color
-//            .init(red: 132/255, green: 49/255, blue: 80/255)
-//            .edgesIgnoringSafeArea(.all)
-//
-//    Spacer()
-//        Text("").padding()
-//    Spacer()
+        GeometryReader{ gr in
     
-    CarouselView(itemHeight: 450,
+            CarouselView(itemHeight: gr.size.height/2,
         views: [
-            AnyView(Text("Lunch")),
-            AnyView(Text("Schedule")),
-            AnyView(Text("Calendar")),
+            AnyView(Text("Lunch")
+                        .foregroundColor(.black)
+                    
+            
+            ),
+            AnyView(Text("Schedule")
+                        .foregroundColor(.black)),
+            AnyView(Text("Calendar")
+                        .foregroundColor(.black)),
+            AnyView(Text("Lunch")
+                        .foregroundColor(.black)),
+            AnyView(Text("Schedule")
+                        .foregroundColor(.black)),
+            AnyView(Text("Calendar")
+                        .foregroundColor(.black)),
+            AnyView(Text("Lunch")
+                        .foregroundColor(.black)),
+            AnyView(Text("Schedule")
+                        .foregroundColor(.black)),
+            AnyView(Text("Calendar")
+                        .foregroundColor(.black))
         
+            
         
-        
-        ])
+            ])
+            
+            
+    }
     }
 }
 }

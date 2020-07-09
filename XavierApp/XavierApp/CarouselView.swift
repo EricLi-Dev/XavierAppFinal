@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct CarouselView: View {
-    
+
     @GestureState private var dragState = DragState.inactive
     @State var carouselLocation = 0
     
@@ -31,7 +31,10 @@ struct CarouselView: View {
     
     
     var body: some View {
-        ZStack{
+        
+        
+        let stack = ZStack{
+            
 //            VStack{
 //                Text("\(dragState.translation.width)")
 //                Text("Carousel Location = \(carouselLocation)")
@@ -43,6 +46,7 @@ struct CarouselView: View {
                 
                 ZStack{
                     ForEach(0..<views.count){i in
+                        GeometryReader{ gr in
                         VStack{
                             Spacer()
                             self.views[i]
@@ -60,6 +64,7 @@ struct CarouselView: View {
                             .offset(x: self.getOffset(i))
                             .animation(.interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
                             Spacer()
+                        }.frame(width: gr.size.width, height: gr.size.height)
                         }
                     }
                     
@@ -75,18 +80,97 @@ struct CarouselView: View {
                 
                 Spacer()
             }
-            VStack{
-                Spacer()
-                Spacer().frame(height:itemHeight + 150)
-                Text("\(relativeLoc() + 1)/\(views.count)").padding()
-                Spacer()
+                //page = relativeLoc() + 1
+                
+               //PageIndicators
+                GeometryReader{ geo in
+                    VStack{
+//                        if (page < 1) {
+//                            page = 3
+//
+//                            Text("")
+//
+//                        }
+//                        if (page > 3) {
+//                            page = 1
+//
+//                            Text("")
+//
+//                        }
+                        
+                        Spacer()
+                            Text("")
+                                .padding(105)
+                        Spacer()
+                    HStack(alignment: .center){
+                        
+                     
+                        
+                        //1st Circle
+                        if ((relativeLoc() + 1) % 3 == 0){
+                            Circle()
+                                .fill(Color("Blue"))
+                                .frame(width: geo.size.width/40, height: geo.size.height/10)
+                        } else {
+                            Circle()
+                                .stroke()
+                                .fill(Color.gray)
+                                .frame(width: geo.size.width/40, height: geo.size.height/10)
+                            
+                        }
+                        //2nd Circle
+                        if ((relativeLoc() + 1) % 3 == 1){
+                            Circle()
+                                .fill(Color("Blue"))
+                                .frame(width: geo.size.width/40, height: geo.size.height/10)
+                        } else {
+                            Circle()
+                                .stroke()
+                                .fill(Color.gray)
+                                .frame(width: geo.size.width/40, height: geo.size.height/10)
+                        }
+                        //3rd Circle
+                        if ((relativeLoc() + 1) % 3 == 2){
+                            Circle()
+                                .fill(Color("Blue"))
+                                .frame(width: geo.size.width/40, height: geo.size.height/10)
+                        } else {
+                            Circle()
+                                .stroke()
+                                .fill(Color.gray)
+                                .frame(width: geo.size.width/40, height: geo.size.height/10)
+                        }
+                        
+                        //Text("\(page)")
+                        
+                    }
+                    .frame(width: geo.size.width, height: geo.size.height)
+                    
+                        
+              }
             }
+                
+               
+            
+            
+            
+            
+           
+
+            
         }
+        return stack
+        
+        
     }
     
     func relativeLoc() -> Int{
-        return ((views.count * 10000) + carouselLocation) % views.count
+        
+       return ((views.count * 10000) + carouselLocation) % views.count
+        
     }
+    
+    
     
     func getHeight(_ i:Int) -> CGFloat{
         if i == relativeLoc(){
@@ -191,6 +275,8 @@ struct CarouselView: View {
     }
     
     
+    
+    
 }
 
 
@@ -219,3 +305,14 @@ enum DragState {
         }
     }
 }
+
+struct CarouselView_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
+
+    
+    
+
+
