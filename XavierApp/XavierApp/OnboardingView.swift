@@ -21,7 +21,10 @@ extension View {
     }
 }
 
-struct OnboardingView: View {
+struct OnboardingView:
+    View {
+    
+    @ObservedObject var userSettings = UserSettings()
     @State var logoScreen = false
     
     var body: some View {
@@ -81,7 +84,9 @@ struct OnboardingView: View {
         
     
 struct PageOne: View {
+    @ObservedObject var userSettings = UserSettings()
     @State var username: String = ""
+    
     @State var parent = false
     @State var student = false
     var body: some View {
@@ -127,7 +132,7 @@ struct PageOne: View {
                             .animation(Animation.interpolatingSpring( stiffness: 10, damping: 30, initialVelocity: 5).delay(0.1))
                                
                                 
-                        TextField("Tyler Wing Wong", text: $username)
+                            TextField("Tyler Wing Wong", text: $userSettings.name)
                             .foregroundColor(.black)//Black Text
                             .padding(10)
                             .border(Color("Blue"))
@@ -140,6 +145,7 @@ struct PageOne: View {
                             //.position(x: 180, y: -40)
                             
                             .animation(Animation.interpolatingSpring( stiffness: 10, damping: 30, initialVelocity: 5).delay(0.1))
+                            
                             
                             Divider()
                             Divider()
@@ -227,13 +233,14 @@ struct PageOne: View {
         }
     }
 }
+    
+   
 }
 
 
 
 struct PageTwo: View {
-    @State var parent = false
-    @State var student = false
+    @ObservedObject var userSettings = UserSettings()
     
     var body: some View {
         NavigationView{
@@ -269,24 +276,24 @@ struct PageTwo: View {
                                     
                             ZStack(){
                                 VStack{
-                                VStack{
-                                    Text("I am a")
-                                        .foregroundColor(Color.white)
-                                        .font(.system(size: 60))
-                                        .padding(.leading)
-                                        .fixedSize(horizontal: false, vertical: true)
-//                                        .position(x: 200, y: -250)
-                                        .multilineTextAlignment(.center)
-                                        .animation(Animation.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2).delay(0.1))
-                                    
-                                }
-                                
+//                                VStack{
+//                                    Text("I am a")
+//                                        .foregroundColor(Color.white)
+//                                        .font(.system(size: 60))
+//                                        .padding(.leading)
+//                                        .fixedSize(horizontal: false, vertical: true)
+//                                        .multilineTextAlignment(.center)
+//                                        .animation(Animation.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2).delay(0.1))
+//
+//                                }
+//
                                 VStack{
                                     Button(action: {
-                                        self.parent.toggle()
+                                            UserDefaults.standard.set(true, forKey: "isParent")
+                                        UserDefaults.standard.set(false, forKey: "isStudent")
                                     }) {
                                         Text("Parent")
-                                            .padding()
+                                            
                                     }
                                     .padding(.horizontal)
                                     .padding()
@@ -294,12 +301,15 @@ struct PageTwo: View {
                                     .background(Capsule().fill(Color("Blue")))
                                     .opacity(1)
                                     .animation(Animation.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2).delay(0.1))
-
+                                    
+                                    .padding()
+                                    
                                     Button(action: {
-                                        self.student.toggle()
+                                        UserDefaults.standard.set(true, forKey: "isParent")
+                                    UserDefaults.standard.set(false, forKey: "isStudent")
                                     }) {
                                         Text("Student")
-                                        .padding()
+                                        
                                     }
                                     .padding(.horizontal)
                                     .padding()
@@ -398,6 +408,7 @@ struct PageTwo: View {
 }
 
 struct PageThree: View {
+    @ObservedObject var userSettings = UserSettings()
     var body: some View {
         NavigationView{
             
@@ -477,7 +488,7 @@ struct PageThree: View {
                             
                             ZStack{
                                 //Next Button
-                                NavigationLink(destination: mainView().navigationBarBackButtonHidden(true)){
+                                NavigationLink(destination: MotherView().navigationBarBackButtonHidden(true)){
                                     Text("Next")
                                     Image(systemName: "chevron.right")
                                 }

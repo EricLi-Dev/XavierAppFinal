@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct CarouselView: View {
+    
+    @ObservedObject var userSettings = UserSettings()
 
     @GestureState private var dragState = DragState.inactive
     @State var carouselLocation = 0
@@ -33,15 +35,70 @@ struct CarouselView: View {
     var body: some View {
         
         
-        let stack = ZStack{
+        ZStack{
             
-//            VStack{
-//                Text("\(dragState.translation.width)")
-//                Text("Carousel Location = \(carouselLocation)")
-//                Text("Relative Location = \(relativeLoc())")
-//                Text("\(relativeLoc()) / \(views.count-1)")
-//                Spacer()
-//            }
+            VStack{
+                ZStack{
+                //Text
+                GeometryReader{ gr in
+                    ZStack{
+                        HStack(){
+                            
+                            //Calendar Card
+                            if ((relativeLoc() + 1) % 3 == 0){
+                                Text("")
+                                    .padding(110)
+                                
+                                Text(getDate())
+                                    .font(.largeTitle)
+                                    .foregroundColor(.white)
+                                    
+                            }
+                            
+                            //Lunch Card
+                            if ((relativeLoc() + 1) % 3 == 1){
+                                Text("")
+                                    .padding(110)
+                                
+                                Text(welcomeText())
+                                    .font(.largeTitle)
+                                    .foregroundColor(.white)
+                                    .frame(alignment: .trailing)
+                                    
+                                    
+                            }
+                            
+                            //Schedule Card
+                            if ((relativeLoc() + 1) % 3 == 2){
+                                Text("")
+                                    .padding(180)
+                                
+                                Text(getLetterDay())
+                                    .font(.largeTitle)
+                                    .foregroundColor(.white)
+                                    
+                            }
+                            
+                            
+                        }
+                        .frame(height: gr.size.height*1.2)
+                    
+                    
+                    
+                }
+                    //.background(Color.red)
+              }
+            }
+            
+            VStack{
+                    Text("")
+                        .padding(.bottom)
+                    Spacer()
+        
+            }
+            //.background(Color.blue)
+                
+                
             VStack{
                 
                 ZStack{
@@ -80,28 +137,25 @@ struct CarouselView: View {
                 
                 Spacer()
             }
-                //page = relativeLoc() + 1
+            
+            
+                
                 
                //PageIndicators
                 GeometryReader{ geo in
                     VStack{
-//                        if (page < 1) {
-//                            page = 3
-//
+                        
+//                        Spacer()
 //                            Text("")
-//
-//                        }
-//                        if (page > 3) {
-//                            page = 1
-//
-//                            Text("")
-//
-//                        }
+//                                .padding(105)
+//                        Spacer()
                         
                         Spacer()
                             Text("")
-                                .padding(105)
+                                .padding(10)
                         Spacer()
+                        
+                    
                     HStack(alignment: .center){
                         
                      
@@ -159,10 +213,77 @@ struct CarouselView: View {
 
             
         }
-        return stack
-        
         
     }
+}
+    
+    //Text Functions
+    func getDate() -> String{
+        
+        //Declares variables for repetitive use
+        let date = Date()
+        let calendar = Calendar.current
+        
+        //Month integer number
+        let month = calendar.component(.month, from: date)
+        //Day of the Month
+        let dayOfMonth = calendar.component(.day, from: date)
+        //Weekday integer number
+        let weekday = calendar.component(.weekday, from: date)
+        //Year
+        let year = calendar.component(.year, from: date)
+        
+        //Declaration of the monthWord and dayWord used in return statement
+        var monthWord = ""
+        var dayWord = ""
+        
+        
+        //Arrays of Months and Weekdays
+        let monthsArray = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."]
+        let daysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        
+        //Month in string form
+        monthWord = monthsArray[month - 1]
+        //Day in string form
+        dayWord = daysArray[weekday - 1]
+        
+        //suffix for the ending of the day of the month
+        var suffix = ""
+        
+        if (dayOfMonth == 1){
+            suffix = "st"
+        } else if (dayOfMonth == 2){
+            suffix = "nd"
+        } else if (dayOfMonth == 3){
+            suffix = "rd"
+        } else{
+            suffix = "th"
+        }
+        
+        
+        
+        
+        return "\(dayWord) \n\(monthWord) \(dayOfMonth)\(suffix) \(year)"
+    }
+    
+    func getLetterDay() -> String{
+        return "  G\nDay"
+    }
+    
+    func welcomeText() -> String{
+        let name = userSettings.name
+        let hour = Calendar.current.component(.hour, from: Date())
+        var greeting = ""
+        if (hour < 12){
+            greeting = "Good Morning,"
+        } else if (hour < 18){
+            greeting = "Good Afternoon,"
+        } else{
+            greeting = "Good Evening,"
+        }
+        return "\(greeting) \n\(name)"
+    }
+    
     
     func relativeLoc() -> Int{
         
