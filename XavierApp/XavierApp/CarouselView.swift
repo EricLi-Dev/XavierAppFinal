@@ -267,6 +267,8 @@ struct CarouselView: View {
     }
     
     func getLetterDay() -> String{
+        
+        //Webscraping by TJ
         return "  G\nDay"
     }
     

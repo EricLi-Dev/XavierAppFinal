@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct parentView: View {
-    @EnvironmentObject var userSettings: UserSettings
+    @ObservedObject var userSettings = UserSettings()
     @State var scale1: CGFloat = 0
     @State private var step = false
     var circleAnimation = Circle()
@@ -55,8 +55,22 @@ struct parentView: View {
                         
                                 CarouselView( itemHeight: gr.size.height/2.2,
                             views: [
-                                AnyView(Text("Events")
-                                            .foregroundColor(.black)
+                                AnyView(
+                                    VStack{
+//                                    Text("Events")
+//                                        .foregroundColor(.black)
+                                        
+                                        Toggle(isOn: self.$userSettings.viewSwitch){
+                                        Text("ParentView")
+                                    }
+                                    
+                                if userSettings.viewSwitch == true {
+                                    parentView()
+                                } else{
+                                    studentView()
+                                }
+                                
+                                    }
                                         
                                 
                                 ),

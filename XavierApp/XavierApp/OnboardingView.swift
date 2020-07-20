@@ -48,12 +48,12 @@ struct OnboardingView:
                     //.animation(.easeIn(duration: 1.0))
                     
                
-                Text("XavierApp")
+                Text("")
                     .font(.largeTitle)
                     .bold()
                     .foregroundColor(.white)
                     .multilineTextAlignment(.leading)
-                    .padding(.horizontal, 40.0)
+                    .padding(40.0)
                     //.animation(.easeIn(duration: 1.0))
                 
                 Divider()
@@ -289,8 +289,10 @@ struct PageTwo: View {
 //
                                 VStack{
                                     Button(action: {
-                                            UserDefaults.standard.set(true, forKey: "isParent")
+                                        UserDefaults.standard.set(true, forKey: "isParent")
                                         UserDefaults.standard.set(false, forKey: "isStudent")
+                                        
+                                        UserDefaults.standard.set(true, forKey: "viewSwitch")
                                     }) {
                                         Text("Parent")
                                             
@@ -305,8 +307,8 @@ struct PageTwo: View {
                                     .padding()
                                     
                                     Button(action: {
-                                        UserDefaults.standard.set(true, forKey: "isParent")
-                                    UserDefaults.standard.set(false, forKey: "isStudent")
+                                        UserDefaults.standard.set(false, forKey: "isParent")
+                                    UserDefaults.standard.set(true, forKey: "isStudent")
                                     }) {
                                         Text("Student")
                                         

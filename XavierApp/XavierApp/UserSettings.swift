@@ -34,6 +34,15 @@ class UserSettings: ObservableObject{
         
     }
     
+    
+    @Published var viewSwitch: Bool{
+        didSet{
+            UserDefaults.standard.set(viewSwitch, forKey: "viewSwitch")
+        }
+        
+    }
+
+    
     init() {
         self.name = UserDefaults.standard.object(forKey: "name") as? String ?? ""
         
@@ -41,6 +50,10 @@ class UserSettings: ObservableObject{
         self.isParent = UserDefaults.standard.object(forKey: "isParent") as? Bool ?? false
         
         self.isStudent = UserDefaults.standard.object(forKey: "isStudent") as? Bool ?? false
+        
+        
+        self.viewSwitch = UserDefaults.standard.object(forKey: "viewSwitch") as? Bool ?? false
+        
     }
         
     
