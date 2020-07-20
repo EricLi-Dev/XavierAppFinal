@@ -292,7 +292,7 @@ struct PageTwo: View {
                                         UserDefaults.standard.set(true, forKey: "isParent")
                                         UserDefaults.standard.set(false, forKey: "isStudent")
                                         
-                                        UserDefaults.standard.set(true, forKey: "viewSwitch")
+                                        //UserDefaults.standard.set(true, forKey: "viewSwitch")
                                     }) {
                                         Text("Parent")
                                             

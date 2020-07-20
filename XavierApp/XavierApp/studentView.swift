@@ -57,18 +57,18 @@ struct studentView: View {
                             views: [
                                 AnyView(
                                     VStack{
-//                                    Text("Lunch")
-//                                        .foregroundColor(.black)
+                                    Text("Lunch")
+                                        .foregroundColor(.black)
                                         
-                                        Toggle(isOn: self.$userSettings.viewSwitch){
-                                        Text("ParentView")
-                                    }
+                                        //Toggle(isOn: self.$userSettings.viewSwitch){
+                                       // Text("ParentView")
+                                    //}
                                     
-                                if userSettings.viewSwitch == true {
-                                    parentView()
-                                } else{
-                                    studentView()
-                                }
+//                                if userSettings.viewSwitch == true {
+//                                    parentView()
+//                                } else{
+//                                    studentView()
+//                                }
                                 
                                     }),
                                 AnyView(Text("Schedule")
