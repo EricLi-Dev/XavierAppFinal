@@ -5,6 +5,8 @@
 //  Created by Eric Li on 6/24/20.
 //
 import SwiftUI
+import VisionKit
+import Vision
 
 
 struct HiddenNavigationBar: ViewModifier {
@@ -20,6 +22,87 @@ extension View {
         modifier( HiddenNavigationBar() )
     }
 }
+
+struct ScanDocumentView: UIViewControllerRepresentable {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    @Binding var recognizedText: String
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(recognizedText: $recognizedText, parent: self)
+    }
+    
+    func makeUIViewController(context: Context) -> VNDocumentCameraViewController {
+        let documentViewController = VNDocumentCameraViewController()
+        documentViewController.delegate = context.coordinator
+        return documentViewController
+    }
+    
+    func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: Context) {
+        //to implement
+    }
+    
+    class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
+        
+        var recognizedText: Binding<String>
+        var parent: ScanDocumentView
+        
+        init(recognizedText: Binding<String>, parent: ScanDocumentView){
+            self.recognizedText = recognizedText
+            self.parent = parent
+        }
+        
+        func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan){
+            let extractedImages = extractImages(from: scan)
+            let processedText = recognizeText(from: extractedImages)
+            recognizedText.wrappedValue = processedText
+            
+            parent.presentationMode.wrappedValue.dismiss()
+        }
+        
+        fileprivate func extractImages(from scan: VNDocumentCameraScan) -> [CGImage]{
+            var extractedImages = [CGImage]()
+            for index in 0..<scan.pageCount {
+                let extractedImage = scan.imageOfPage(at: index)
+                guard let cgImage = extractedImage.cgImage else { continue }
+                
+                extractedImages.append(cgImage)
+            }
+            return extractedImages
+        }
+        
+        
+        fileprivate func recognizeText(from images: [CGImage]) -> String {
+            var entireRecognizedText = ""
+            let recognizeTextRequest = VNRecognizeTextRequest { (request, error) in
+                guard error == nil else { return }
+                
+                guard let observations = request.results as? [VNRecognizedTextObservation] else { return }
+                
+                let maximumRecognitionCandidates = 1
+                for observation in observations {
+                    guard let candidate = observation.topCandidates(maximumRecognitionCandidates).first else { continue }
+                    
+                    entireRecognizedText += "\(candidate.string)\n"
+                    
+                }
+            }
+            recognizeTextRequest.recognitionLevel = .accurate
+            
+            for image in images {
+                let requestHandler = VNImageRequestHandler(cgImage: image, options: [:])
+                
+                try? requestHandler.perform([recognizeTextRequest])
+            }
+            
+            return entireRecognizedText
+        }
+        
+    }
+        
+}
+
 
 struct OnboardingView:
     View {
@@ -409,8 +492,11 @@ struct PageTwo: View {
 }
 }
 
+
 struct PageThree: View {
     @ObservedObject var userSettings = UserSettings()
+    @State private var recognizedText = "Tap"
+    @State private var showingScanningView = false
     var body: some View {
         NavigationView{
             
@@ -445,9 +531,32 @@ struct PageThree: View {
                                     
                             ZStack(){
                                 VStack{
+                                    ZStack{
+                                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                            .fill(Color.gray.opacity(0.2))
+                                        
+                                        Text(recognizedText)
+                                            .padding()
+                                    }
                                     
+                                    Button(action: {
+                                        self.showingScanningView = true
+                                    }) {
+                                        Image(systemName: "camera")
+                                            .padding(.horizontal)
+                                            .padding()
+                                            .accentColor(Color.white)
+                                            .background(Capsule().fill(Color("Blue")))
+                                            .opacity(1)
+                                            .animation(Animation.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2).delay(0.1))
+                                            
+                                    }
                                     
+                                }.sheet(isPresented: $showingScanningView) {
+                                    ScanDocumentView(recognizedText: self.$recognizedText)
                                 }
+                                
+                                
                             }
                                 //.background(Color.pink)
                                 .frame(width: gr.size.width, height: gr.size.height/3)
