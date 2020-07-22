@@ -19,7 +19,6 @@
 		137C381824A5B73A002F6D19 /* whiteboard in Resources */ = {isa = PBXBuildFile; fileRef = 137C381724A5B73A002F6D19 /* whiteboard */; };
 		137C381A24A5B7DB002F6D19 /* backgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C381924A5B7DB002F6D19 /* backgroundView.swift */; };
 		A70478A024B6ACE7002D463D /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704789F24B6ACE7002D463D /* UserSettings.swift */; };
-		A70D7D5124C642CC002C200B /* cameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70D7D5024C642CC002C200B /* cameraView.swift */; };
 		A742AFAB24BD015A003B229D /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAA24BD015A003B229D /* ViewRouter.swift */; };
 		A742AFAD24BD0213003B229D /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAC24BD0213003B229D /* MotherView.swift */; };
 		A742AFAF24BD0AD4003B229D /* parentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAE24BD0AD4003B229D /* parentView.swift */; };
@@ -64,7 +63,6 @@
 		137C381724A5B73A002F6D19 /* whiteboard */ = {isa = PBXFileReference; lastKnownFileType = text; path = whiteboard; sourceTree = "<group>"; };
 		137C381924A5B7DB002F6D19 /* backgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundView.swift; sourceTree = "<group>"; };
 		A704789F24B6ACE7002D463D /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
-		A70D7D5024C642CC002C200B /* cameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraView.swift; sourceTree = "<group>"; };
 		A742AFAA24BD015A003B229D /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		A742AFAC24BD0213003B229D /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		A742AFAE24BD0AD4003B229D /* parentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parentView.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 				A742AFAC24BD0213003B229D /* MotherView.swift */,
 				A742AFAA24BD015A003B229D /* ViewRouter.swift */,
 				A78BF1E224A404810008C7FC /* OnboardingView.swift */,
-				A70D7D5024C642CC002C200B /* cameraView.swift */,
 				A704789F24B6ACE7002D463D /* UserSettings.swift */,
 				A74445AB24AE7871004ECE1B /* CarouselView.swift */,
 				1372591A24A3F60000364C14 /* studentView.swift */,
@@ -304,7 +301,6 @@
 				A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */,
 				1372591B24A3F60000364C14 /* studentView.swift in Sources */,
 				A70478A024B6ACE7002D463D /* UserSettings.swift in Sources */,
-				A70D7D5124C642CC002C200B /* cameraView.swift in Sources */,
 				A742AFAF24BD0AD4003B229D /* parentView.swift in Sources */,
 				1372591924A3F60000364C14 /* XavierAppApp.swift in Sources */,
 				137C381424A5B541002F6D19 /* warningButtonView.swift in Sources */,
