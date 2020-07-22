@@ -21,6 +21,7 @@ extension View {
     func hiddenNavigationBarStyle() -> some View {
         modifier( HiddenNavigationBar() )
     }
+     
 }
 
 struct ScanDocumentView: UIViewControllerRepresentable {
@@ -89,6 +90,9 @@ struct ScanDocumentView: UIViewControllerRepresentable {
                 }
             }
             recognizeTextRequest.recognitionLevel = .accurate
+            recognizeTextRequest.usesLanguageCorrection = true
+            recognizeTextRequest.revision = VNRecognizeTextRequestRevision2
+            recognizeTextRequest.customWords = ["G"]
             
             for image in images {
                 let requestHandler = VNImageRequestHandler(cgImage: image, options: [:])
@@ -496,8 +500,10 @@ struct PageTwo: View {
 struct PageThree: View {
     @ObservedObject var userSettings = UserSettings()
     @State private var recognizedText = "Tap"
+    
     @State private var showingScanningView = false
     var body: some View {
+        
         NavigationView{
             
             VStack{
@@ -537,6 +543,8 @@ struct PageThree: View {
                                         
                                         Text(recognizedText)
                                             .padding()
+                                            .fixedSize(horizontal: (1000 != 0),vertical: (1000 != 0))
+                                        
                                     }
                                     
                                     Button(action: {
@@ -636,8 +644,11 @@ struct PageThree: View {
                 }
             
     }
+            
     }
+        
 }
+
 }
 
 
