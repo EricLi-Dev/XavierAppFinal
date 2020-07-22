@@ -43,6 +43,7 @@ struct ScanDocumentView: UIViewControllerRepresentable {
         //to implement
     }
     
+    
     class Coordinator: NSObject, VNDocumentCameraViewControllerDelegate {
         
         var recognizedText: Binding<String>
@@ -88,7 +89,15 @@ struct ScanDocumentView: UIViewControllerRepresentable {
                     
                 }
             }
+            
             recognizeTextRequest.recognitionLevel = .accurate
+            recognizeTextRequest.usesLanguageCorrection = true
+            recognizeTextRequest.revision = VNRecognizeTextRequestRevision2
+            recognizeTextRequest.customWords = ["2019"]
+            recognizeTextRequest.minimumTextHeight = 0.3//Text bigger than 30% of the image height
+//            recognizeTextRequest.progressHandler = {
+//
+//            }
             
             for image in images {
                 let requestHandler = VNImageRequestHandler(cgImage: image, options: [:])
@@ -495,7 +504,8 @@ struct PageTwo: View {
 
 struct PageThree: View {
     @ObservedObject var userSettings = UserSettings()
-    @State private var recognizedText = "Tap"
+    @State private var recognizedText = ""
+    @State private var progressText = ""
     @State private var showingScanningView = false
     var body: some View {
         NavigationView{
@@ -554,6 +564,8 @@ struct PageThree: View {
                                     
                                 }.sheet(isPresented: $showingScanningView) {
                                     ScanDocumentView(recognizedText: self.$recognizedText)
+                                   
+                                    
                                 }
                                 
                                 
