@@ -29,6 +29,7 @@ struct CarouselView: View {
 
     @State var menuOpen: Bool = false
     var body: some View {
+
         // This vstack conttains buttons within an hstack,
 
         VStack {
@@ -62,46 +63,62 @@ struct CarouselView: View {
 //                        }
 //                    }
             }
-            ZStack {
-                // Text
 
-                GeometryReader { gr in
-                    ZStack {
-                        HStack {
-                            // Calendar Card
-                            if (relativeLoc() + 1) % 3 == 0 {
-                                Text("")
-                                    .padding(110)
-
+                ZStack{
+                //Text
+                GeometryReader{ gr in
+                    ZStack{
+                        HStack(){
+                            
+                            //Calendar Card
+                            if ((relativeLoc() + 1) % 3 == 0){
+                               
+                                
                                 Text(getDate())
                                     .font(.largeTitle)
                                     .foregroundColor(.white)
+                                    .padding(.trailing, 90)
+
+                                
+                                    
                             }
-
-                            // Lunch Card
-                            if (relativeLoc() + 1) % 3 == 1 {
-                                Text("")
-                                    .padding(110)
-
+                            
+                            //Lunch Card
+                            if ((relativeLoc() + 1) % 3 == 1){
+//                                VStack(alignment: .leading){
+                               
+                                
                                 Text(welcomeText())
                                     .font(.largeTitle)
                                     .foregroundColor(.white)
-                                    .frame(alignment: .trailing)
+                                    .padding(.trailing, 90)
+                                    
+//                                }
+                                    
                             }
-
-                            // Schedule Card
-                            if (relativeLoc() + 1) % 3 == 2 {
-                                Text("")
-                                    .padding(180)
-
+                            
+                            //Schedule Card
+                            if ((relativeLoc() + 1) % 3 == 2){
+                                
+//                                Text("")
+//                                    .padding(180)
+                                
                                 Text(getLetterDay())
                                     .font(.largeTitle)
                                     .foregroundColor(.white)
+                                    .padding(.trailing, 15)
+
+                                
+                                    
                             }
                         }
+
                         .frame(height: gr.size.height * 1.2)
                     }
                     // .background(Color.red)
+
+                        .frame(width: gr.size.width, height: gr.size.height*1.2)
+
                 }
             }
 
@@ -251,6 +268,7 @@ struct CarouselView: View {
     func getLetterDay() -> String {
         // Webscraping by TJ
         return "  G\nDay"
+
     }
 
     func welcomeText() -> String {
@@ -264,7 +282,7 @@ struct CarouselView: View {
         } else {
             greeting = "Good Evening,"
         }
-        return "\(greeting) \n\(name)"
+        return " \(greeting) \n \(name)"
     }
 
     func relativeLoc() -> Int {
