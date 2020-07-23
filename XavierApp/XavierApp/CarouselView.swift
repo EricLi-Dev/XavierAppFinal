@@ -46,42 +46,49 @@ struct CarouselView: View {
                             
                             //Calendar Card
                             if ((relativeLoc() + 1) % 3 == 0){
-                                Text("")
-                                    .padding(110)
+                               
                                 
                                 Text(getDate())
                                     .font(.largeTitle)
                                     .foregroundColor(.white)
+                                    .padding(.trailing, 90)
+
+                                
                                     
                             }
                             
                             //Lunch Card
                             if ((relativeLoc() + 1) % 3 == 1){
-                                Text("")
-                                    .padding(110)
+//                                VStack(alignment: .leading){
+                               
                                 
                                 Text(welcomeText())
                                     .font(.largeTitle)
                                     .foregroundColor(.white)
-                                    .frame(alignment: .trailing)
+                                    .padding(.trailing, 90)
                                     
+//                                }
                                     
                             }
                             
                             //Schedule Card
                             if ((relativeLoc() + 1) % 3 == 2){
-                                Text("")
-                                    .padding(180)
+                                
+//                                Text("")
+//                                    .padding(180)
                                 
                                 Text(getLetterDay())
                                     .font(.largeTitle)
                                     .foregroundColor(.white)
+                                    .padding(.trailing, 15)
+
+                                
                                     
                             }
                             
                             
                         }
-                        .frame(height: gr.size.height*1.2)
+                        .frame(width: gr.size.width, height: gr.size.height*1.2)
                     
                     
                     
@@ -263,13 +270,13 @@ struct CarouselView: View {
         
         
         
-        return "\(dayWord) \n\(monthWord) \(dayOfMonth)\(suffix) \(year)"
+        return " \(dayWord) \n\(monthWord) \(dayOfMonth)\(suffix) \(year)"
     }
     
     func getLetterDay() -> String{
         
         //Webscraping by TJ
-        return "  G\nDay"
+        return "     G\n   Day"
     }
     
     func welcomeText() -> String{
@@ -283,7 +290,7 @@ struct CarouselView: View {
         } else{
             greeting = "Good Evening,"
         }
-        return "\(greeting) \n\(name)"
+        return " \(greeting) \n \(name)"
     }
     
     

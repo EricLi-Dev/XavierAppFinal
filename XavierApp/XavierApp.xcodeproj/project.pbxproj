@@ -24,6 +24,7 @@
 		A742AFAF24BD0AD4003B229D /* parentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAE24BD0AD4003B229D /* parentView.swift */; };
 		A74445AC24AE7871004ECE1B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74445AB24AE7871004ECE1B /* CarouselView.swift */; };
 		A7687FCA24ABB1E4006E1D2D /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7687FC924ABB1E4006E1D2D /* cardView.swift */; };
+		A782618E24C93BD400FDC2C7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A782618D24C93BD400FDC2C7 /* WebView.swift */; };
 		A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78BF1E224A404810008C7FC /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		A742AFAE24BD0AD4003B229D /* parentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parentView.swift; sourceTree = "<group>"; };
 		A74445AB24AE7871004ECE1B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		A7687FC924ABB1E4006E1D2D /* cardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
+		A782618D24C93BD400FDC2C7 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		A78BF1E224A404810008C7FC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				1372591A24A3F60000364C14 /* studentView.swift */,
 				A742AFAE24BD0AD4003B229D /* parentView.swift */,
 				A7687FC924ABB1E4006E1D2D /* cardView.swift */,
+				A782618D24C93BD400FDC2C7 /* WebView.swift */,
 				137C381924A5B7DB002F6D19 /* backgroundView.swift */,
 				137C381724A5B73A002F6D19 /* whiteboard */,
 				137C381324A5B541002F6D19 /* warningButtonView.swift */,
@@ -309,6 +312,7 @@
 				137C381624A5B5B1002F6D19 /* mainTextView.swift in Sources */,
 				A7687FCA24ABB1E4006E1D2D /* cardView.swift in Sources */,
 				137C381224A5B3D7002F6D19 /* menuButtonView.swift in Sources */,
+				A782618E24C93BD400FDC2C7 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -56,40 +56,35 @@ struct parentView: View {
                                 CarouselView( itemHeight: gr.size.height/2.2,
                             views: [
                                 AnyView(
-                                    VStack{
-                                    Text("Events")
-                                        .foregroundColor(.black)
-                                        
-//                                        Toggle(isOn: self.$userSettings.viewSwitch){
-//                                        Text("ParentView")
-//                                    }
-                                    
-//                                if userSettings.viewSwitch == true {
-//                                    parentView()
-//                                } else{
-//                                    studentView()
-//                                }
-//
-                                    }
-                                        
-                                
+                                    PPCard()
+                                    ),
+                                AnyView(
+                                    MiscCard()
                                 ),
-                                AnyView(Text("Misc.")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Calendar")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Events")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Misc.")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Calendar")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Events")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Misc.")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Calendar")
-                                            .foregroundColor(.black))
+                                AnyView(
+                                    CalendarCard()
+                                ),
+                                AnyView(
+                                    PPCard()
+                                ),
+                                AnyView(
+                                    MiscCard()
+                                ),
+                                AnyView(
+                                    CalendarCard()
+                                ),
+                                AnyView(
+                                    PPCard()
+                                ),
+                                AnyView(
+                                    MiscCard()
+                                ),
+                                AnyView(
+                                    CalendarCard()
+                                ),
+                                AnyView(
+                                    PPCard()
+                                )
                             
                             ])
                         
@@ -121,6 +116,8 @@ struct parentView: View {
         }
     
 }
+
+
 
 struct parentView_Previews: PreviewProvider {
     static var previews: some View {

@@ -7,19 +7,16 @@
 
 import SwiftUI
 
-
 struct studentView: View {
     @ObservedObject var userSettings = UserSettings()
     @State var isOn: Bool = false
     @State private var step = false
+    
     var circleAnimation = Circle()
     
         var body: some View {
             
-            ZStack {
-                
-                    
-                
+           ZStack {
                 
                 ZStack{
                     backgroundView()
@@ -37,15 +34,6 @@ struct studentView: View {
             
             ZStack{
                 VStack{
-//                    VStack{
-//                        ZStack{
-//
-//                            //Text("Goodmorning " + self.userSettings.name)
-//
-//                    }
-//                    }
-//                    //.background(Color.red)
-//                    .frame(width: g.size.width, height: g.size.height/3)
                     
                     
                     VStack{
@@ -56,37 +44,32 @@ struct studentView: View {
                                 CarouselView( itemHeight: gr.size.height/2.2,
                             views: [
                                 AnyView(
-                                    VStack{
-                                    Text("Lunch")
-                                        .foregroundColor(.black)
-                                        
-                                        //Toggle(isOn: self.$userSettings.viewSwitch){
-                                       // Text("ParentView")
-                                    //}
-                                    
-//                                if userSettings.viewSwitch == true {
-//                                    parentView()
-//                                } else{
-//                                    studentView()
-//                                }
-                                
-                                    }),
-                                AnyView(Text("Schedule")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Calendar")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Lunch")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Schedule")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Calendar")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Lunch")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Schedule")
-                                            .foregroundColor(.black)),
-                                AnyView(Text("Calendar")
-                                            .foregroundColor(.black))
+                                    LunchCard()
+                                    ),
+                                AnyView(
+                                    ScheduleCard()
+                                    ),
+                                AnyView(
+                                    CalendarCard()
+                                    ),
+                                AnyView(
+                                    LunchCard()
+                                ),
+                                AnyView(
+                                    ScheduleCard()
+                                ),
+                                AnyView(
+                                    CalendarCard()
+                                ),
+                                AnyView(
+                                    LunchCard()
+                                ),
+                                AnyView(
+                                    ScheduleCard()
+                                ),
+                                AnyView(
+                                    CalendarCard()
+                                )
                             
                             ])
                         
@@ -118,6 +101,7 @@ struct studentView: View {
         }
     
 }
+
 
 struct studentView_Previews: PreviewProvider {
     static var previews: some View {
