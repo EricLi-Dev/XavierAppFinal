@@ -14,7 +14,6 @@ struct mainTextView: View {
             .foregroundColor(.white)
             .font(.custom("Helvetica Neue Medium", size: 35))
             .animation(.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2))
-            
     }
 }
 

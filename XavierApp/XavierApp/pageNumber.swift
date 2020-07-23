@@ -7,8 +7,6 @@
 
 import Foundation
 
-class pageNumber: ObservableObject{
+class pageNumber: ObservableObject {
     @Published var page: Int = 1
-    
-    
 }

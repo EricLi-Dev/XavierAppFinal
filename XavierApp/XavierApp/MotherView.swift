@@ -8,33 +8,27 @@
 import Foundation
 import SwiftUI
 
-struct MotherView: View{
+struct MotherView: View {
     @ObservedObject var viewRouter = ViewRouter()
     @ObservedObject var userSettings = UserSettings()
-    
+
     var body: some View {
-        VStack{
-            if viewRouter.currentPage == "onboardingView"{
+        VStack {
+            if viewRouter.currentPage == "onboardingView" {
                 OnboardingView()
             } else if viewRouter.currentPage == "mainView" {
-                if (userSettings.isParent == true){
-                        parentView()
+                if userSettings.isParent == true {
+                    parentView()
                 } else {
-                   studentView()
+                    studentView()
                 }
             }
-
         }
-        
     }
-    
-    
-    
-    
 }
 
 struct MotherView_Previews: PreviewProvider {
-    static var previews: some View{
+    static var previews: some View {
         MotherView().environmentObject(ViewRouter())
     }
 }

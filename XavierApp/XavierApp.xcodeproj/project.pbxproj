@@ -13,11 +13,8 @@
 		1372592024A3F60100364C14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591F24A3F60100364C14 /* Preview Assets.xcassets */; };
 		1372592B24A3F60100364C14 /* XavierAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372592A24A3F60100364C14 /* XavierAppTests.swift */; };
 		1372593624A3F60100364C14 /* XavierAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372593524A3F60100364C14 /* XavierAppUITests.swift */; };
-		137C381224A5B3D7002F6D19 /* menuButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C381124A5B3D7002F6D19 /* menuButtonView.swift */; };
-		137C381424A5B541002F6D19 /* warningButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C381324A5B541002F6D19 /* warningButtonView.swift */; };
-		137C381624A5B5B1002F6D19 /* mainTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C381524A5B5B1002F6D19 /* mainTextView.swift */; };
-		137C381824A5B73A002F6D19 /* whiteboard in Resources */ = {isa = PBXBuildFile; fileRef = 137C381724A5B73A002F6D19 /* whiteboard */; };
 		137C381A24A5B7DB002F6D19 /* backgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C381924A5B7DB002F6D19 /* backgroundView.swift */; };
+		13EF942324C941A1006F898B /* menuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EF942224C941A1006F898B /* menuView.swift */; };
 		A70478A024B6ACE7002D463D /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704789F24B6ACE7002D463D /* UserSettings.swift */; };
 		A742AFAB24BD015A003B229D /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAA24BD015A003B229D /* ViewRouter.swift */; };
 		A742AFAD24BD0213003B229D /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAC24BD0213003B229D /* MotherView.swift */; };
@@ -57,11 +54,8 @@
 		1372593124A3F60100364C14 /* XavierAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XavierAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1372593524A3F60100364C14 /* XavierAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppUITests.swift; sourceTree = "<group>"; };
 		1372593724A3F60100364C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		137C381124A5B3D7002F6D19 /* menuButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuButtonView.swift; sourceTree = "<group>"; };
-		137C381324A5B541002F6D19 /* warningButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = warningButtonView.swift; sourceTree = "<group>"; };
-		137C381524A5B5B1002F6D19 /* mainTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTextView.swift; sourceTree = "<group>"; };
-		137C381724A5B73A002F6D19 /* whiteboard */ = {isa = PBXFileReference; lastKnownFileType = text; path = whiteboard; sourceTree = "<group>"; };
 		137C381924A5B7DB002F6D19 /* backgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundView.swift; sourceTree = "<group>"; };
+		13EF942224C941A1006F898B /* menuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuView.swift; sourceTree = "<group>"; };
 		A704789F24B6ACE7002D463D /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		A742AFAA24BD015A003B229D /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		A742AFAC24BD0213003B229D /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
@@ -129,10 +123,7 @@
 				A742AFAE24BD0AD4003B229D /* parentView.swift */,
 				A7687FC924ABB1E4006E1D2D /* cardView.swift */,
 				137C381924A5B7DB002F6D19 /* backgroundView.swift */,
-				137C381724A5B73A002F6D19 /* whiteboard */,
-				137C381324A5B541002F6D19 /* warningButtonView.swift */,
-				137C381524A5B5B1002F6D19 /* mainTextView.swift */,
-				137C381124A5B3D7002F6D19 /* menuButtonView.swift */,
+				13EF942224C941A1006F898B /* menuView.swift */,
 				1372591C24A3F60100364C14 /* Assets.xcassets */,
 				1372592124A3F60100364C14 /* Info.plist */,
 				1372591E24A3F60100364C14 /* Preview Content */,
@@ -270,7 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1372592024A3F60100364C14 /* Preview Assets.xcassets in Resources */,
-				137C381824A5B73A002F6D19 /* whiteboard in Resources */,
 				1372591D24A3F60100364C14 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,12 +293,10 @@
 				A70478A024B6ACE7002D463D /* UserSettings.swift in Sources */,
 				A742AFAF24BD0AD4003B229D /* parentView.swift in Sources */,
 				1372591924A3F60000364C14 /* XavierAppApp.swift in Sources */,
-				137C381424A5B541002F6D19 /* warningButtonView.swift in Sources */,
 				137C381A24A5B7DB002F6D19 /* backgroundView.swift in Sources */,
 				A742AFAB24BD015A003B229D /* ViewRouter.swift in Sources */,
-				137C381624A5B5B1002F6D19 /* mainTextView.swift in Sources */,
 				A7687FCA24ABB1E4006E1D2D /* cardView.swift in Sources */,
-				137C381224A5B3D7002F6D19 /* menuButtonView.swift in Sources */,
+				13EF942324C941A1006F898B /* menuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,13 +10,11 @@ import SwiftUI
 @main
 struct XavierAppApp: App {
     var body: some Scene {
-        WindowGroup{
-            
+        WindowGroup {
             MotherView()
-            //cardView()
-            //OnboardingView()
-            //mainView()
-
+            // cardView()
+            // OnboardingView()
+            // mainView()
         }
     }
 }
