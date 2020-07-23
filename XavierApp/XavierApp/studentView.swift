@@ -17,9 +17,11 @@ struct studentView: View {
         var body: some View {
             
            ZStack {
-                
-               
-                
+          
+            
+                ZStack{
+                    backgroundView()
+                }
                 
         GeometryReader{ g in
             
