@@ -1,40 +1,5 @@
 import SwiftUI
 
-
-struct cardView: View {
-    var body: some View {
-        ZStack {
-            GeometryReader { gr in
-
-                CarouselView(itemHeight: gr.size.height / 2,
-                             views: [
-                                 AnyView(Text("Lunch")
-                                     .foregroundColor(.black)
-
-                                 ),
-                                 AnyView(Text("Schedule")
-                                     .foregroundColor(.black)),
-                                 AnyView(Text("Calendar")
-                                     .foregroundColor(.black)),
-                                 AnyView(Text("Lunch")
-                                     .foregroundColor(.black)),
-                                 AnyView(Text("Schedule")
-                                     .foregroundColor(.black)),
-                                 AnyView(Text("Calendar")
-                                     .foregroundColor(.black)),
-                                 AnyView(Text("Lunch")
-                                     .foregroundColor(.black)),
-                                 AnyView(Text("Schedule")
-                                     .foregroundColor(.black)),
-                                 AnyView(Text("Calendar")
-                                     .foregroundColor(.black)),
-
-                             ])
-            }
-        }
-    }
-}
-
 //Information for Schedule Card
 struct Period: Identifiable {
     var id: Int
@@ -309,11 +274,18 @@ struct CalendarCard: View{
 
 
 struct EventsView: View{
+    @ObservedObject var userSettings = UserSettings()
     var body: some View{
         ZStack{
             GeometryReader{ gr in
                 ScrollView(.vertical){
                 VStack(alignment: .leading){
+                    
+//                    List{
+//                        Toggle(isOn: $userSettings.viewSwitch){
+//                            Text("StudentView")
+//                        }
+//                    }
                     
                     Text("Register now and get in early for next February break.  This trip is 9 days and features some amazing once in a lifetime activities.  Canyoning, white water rafting, volcano hot springs, zipline canopy tour, boating and snorkeling, visits to La Fortuna Falls and Manuel Antonio National Park, and hopefully a local soccer match.  Pick a roommate and sign up for this trip!  See Mr. Chiafulio in 5F6 for info on how to register.")
                         .foregroundColor(Color("mediumMaroon"))
@@ -440,7 +412,6 @@ struct MiscCard: View{
     }
 }
 
-
 struct MiscView: View{
     var miscInfo: MiscInfo
     
@@ -451,8 +422,71 @@ struct MiscView: View{
 }
 
 struct PPCard: View{
+    @State private var showingPPView = false
+    
     var body: some View{
-        Text("PlusPortals")
+        GeometryReader{ g in
+            VStack{
+                HStack{
+                    Text("PlusPortals")
+                        .font(.largeTitle)
+                        .fontWeight(.semibold)
+                        .padding(.leading, 30)
+                        .padding(.trailing, 60)
+                        .padding(0)
+                        .foregroundColor(Color("mediumMaroon"))
+                        .font(.custom("Helvetica Neue-Medium", size: 30))
+                        .fixedSize()
+                }.frame(width: g.size.width, height: g.size.height/2)
+            
+            
+                
+            VStack{
+                Button(action: {
+                    self.showingPPView = true
+                }) {
+                    Text("Login")
+                        .padding(.horizontal)
+                        .padding()
+                        .accentColor(Color.white)
+                        .background(Capsule().fill(Color("Blue")))
+                        .opacity(1)
+                        .animation(Animation.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2).delay(0.1))
+                        
+                }
+                
+            }
+            .frame(width: g.size.width, height: g.size.height/3)
+            .sheet(isPresented: $showingPPView) {
+                PPView()
+                
+            
+                
+            }
+         }
+      }
     }
 }
+        
+
+
+struct PPView: View{
+    @ObservedObject var userSettings = UserSettings()
+    var body: some View{
+        VStack{
+            Text("GRADES")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+                .foregroundColor(Color.black)
+            
+            List{
+                Text("AP Computer Science: FAIL")
+                Toggle(isOn: $userSettings.viewSwitch){
+                    Text("StudentView")
+                }
+            }
+        }
+    }
+}
+
 

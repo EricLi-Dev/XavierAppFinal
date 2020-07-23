@@ -7,113 +7,72 @@
 
 import SwiftUI
 
-
 struct parentView: View {
     @ObservedObject var userSettings = UserSettings()
     @State var scale1: CGFloat = 0
     @State private var step = false
     var circleAnimation = Circle()
-    
-        var body: some View {
-            
-            ZStack {
-                
-                    
-                
-                
-                ZStack{
-                    backgroundView()
+
+    var body: some View {
+        GeometryReader { g in
+
+
+                VStack {
                     VStack {
-                        HStack(spacing:     (UIScreen.main.bounds.size  .width/4)*2.75)  {
-                            menuButtonView()
-                            warningButtonView();
+                        ZStack {
+                            // Cards
+                            GeometryReader { gr in
+
+                                CarouselView(itemHeight: gr.size.height / 2.2,
+                                             views: [
+                                                 AnyView(
+                                                     PPCard()
+
+                                                 ),
+                                                 AnyView(
+                                                     MiscCard()
+                                                 ),
+                                                 AnyView(
+                                                     CalendarCard()
+                                                 ),
+                                                 AnyView(
+                                                     PPCard()
+                                                 ),
+                                                 AnyView(
+                                                     MiscCard()
+                                                 ),
+                                                 AnyView(
+                                                     CalendarCard()
+                                                 ),
+                                                 AnyView(
+                                                     PPCard()
+                                                 ),
+                                                 AnyView(
+                                                     MiscCard()
+                                                 ),
+                                                 AnyView(
+                                                     CalendarCard()
+                                                 ),
+                                                 AnyView(
+                                                     PPCard()
+                                                 ),
+
+                                             ])
+                            }
                         }
-                        mainTextView()
                     }
+                    // .background(Color.blue)
+                    .frame(width: g.size.width, height: g.size.height / 1.07)
                 }
-                
-                
-        GeometryReader{ g in
-            
-            ZStack{
-                VStack{
-                    
-                    
-                    VStack{
-                        ZStack{
-                            //Cards
-                            GeometryReader{ gr in
-                        
-                                CarouselView( itemHeight: gr.size.height/2.2,
-                            views: [
-                                AnyView(
-                                    PPCard()
-                                    
-                                    ),
-                                AnyView(
-                                    MiscCard()
-                                ),
-                                AnyView(
-                                    CalendarCard()
-                                ),
-                                AnyView(
-                                    PPCard()
-                                ),
-                                AnyView(
-                                    MiscCard()
-                                ),
-                                AnyView(
-                                    CalendarCard()
-                                ),
-                                AnyView(
-                                    PPCard()
-                                ),
-                                AnyView(
-                                    MiscCard()
-                                ),
-                                AnyView(
-                                    CalendarCard()
-                                ),
-                                AnyView(
-                                    PPCard()
-                                )
-                            
-                            ])
-                        
-                        }
-                            
-                            
-                }
-                
             }
-            //.background(Color.blue)
-                    .frame(width: g.size.width, height: g.size.height/1.07)
-            
-                    
-                    
-        }
-                
+        
+
+        // .hiddenNavigationBarStyle()
     }
-           
-            
-                
-            
-           
 }
-        
-}
-//.hiddenNavigationBarStyle()
-          
-        
-        }
-    
-}
-
-
 
 struct parentView_Previews: PreviewProvider {
     static var previews: some View {
         parentView()
     }
 }
-
