@@ -305,8 +305,10 @@ struct MiscCard: View{
     
     ]
     
+    @State private var showingWebView = false
+    
     var body: some View{
-        NavigationView{
+        //NavigationView{
         GeometryReader{ g in
             VStack{
                 
@@ -329,13 +331,18 @@ struct MiscCard: View{
                        
                         ForEach(miscInfo){ misc in
                                 //Nav Link To Destination
-                                NavigationLink(
-                                    destination:
-                                        WebView(url: misc.url)
-                                            .navigationBarTitle(
-                                                Text(misc.topicName)
-                                           )
-                                            )
+//                                NavigationLink(
+//                                    destination:
+//                                        WebView(url: misc.url)
+//                                            .navigationBarTitle(
+//                                                Text(misc.topicName)
+//                                           )
+//                                            )
+                            Button(action: {
+                                self.showingWebView = true
+                            }
+                            
+                            )
                                 {
                                     VStack(alignment: .leading){
                                         HStack{
@@ -374,8 +381,12 @@ struct MiscCard: View{
                                             .fill(Color("Blue"))
                                             .frame(width: g.size.width/1.2,             height: g.size.height/300)
                                             .edgesIgnoringSafeArea(         .horizontal)
+                                            .padding(.leading, 20)
                                     }
                                 }
+                            .sheet(isPresented: $showingWebView){
+                                MiscView(miscInfo: misc)
+                            }
                         }
                     }
                     
@@ -389,8 +400,8 @@ struct MiscCard: View{
                 
             }
         }
-        .navigationBarHidden(true)
-    }
+        //.navigationBarHidden(true)
+    
     }
 }
 
@@ -398,7 +409,7 @@ struct MiscView: View{
     var miscInfo: MiscInfo
     
     var body: some View{
-        WebView(url: miscInfo.url)
+        WebView(url: "https://www.google.com/")
             .edgesIgnoringSafeArea(.all)
     }
 }
