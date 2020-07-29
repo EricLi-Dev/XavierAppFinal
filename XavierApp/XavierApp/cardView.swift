@@ -4,9 +4,10 @@ import SwiftUI
 struct Period: Identifiable {
     var id: Int
     
-    let periodName: String
-    let periodNumber: Int
-    let timeRange: String
+    let letterDay: String
+    var periodName: String
+    var periodNumber: Int
+    var timeRange: String
 }
 
 //Information for Calendar Card
@@ -118,14 +119,14 @@ struct LunchCard: View{
 struct ScheduleCard: View{
     
     let periods: [Period] = [
-        .init(id: 0, periodName: "Religion", periodNumber: 1, timeRange: "8:20 - 9:10"),
-        .init(id: 1, periodName: "APUSH", periodNumber: 2, timeRange: "9:10 - 10:00"),
-        .init(id: 2, periodName: "Community Period", periodNumber: 3, timeRange: "10:00 - 10:40"),
-        .init(id: 3, periodName: "AP Computer Science", periodNumber: 4, timeRange: "10:40 - 11:30"),
-        .init(id: 4, periodName: "Military Science", periodNumber: 5, timeRange: "11:30 - 12:20"),
-        .init(id: 5, periodName: "Lunch", periodNumber: 6, timeRange: "12:20 - 1:10"),
-        .init(id: 6, periodName: "AP English 11", periodNumber: 7, timeRange: "1:10 - 1:50"),
-        .init(id: 7, periodName: "Calculus", periodNumber: 8, timeRange: "1:50 - 2:40")
+        .init(id: 0, letterDay: "A", periodName: "Religion", periodNumber: 1, timeRange: "8:20 - 9:10"),
+        .init(id: 1, letterDay: "A", periodName: "APUSH", periodNumber: 2, timeRange: "9:10 - 10:00"),
+        .init(id: 2, letterDay: "A", periodName: "Community Period", periodNumber: 3, timeRange: "10:00 - 10:40"),
+        .init(id: 3, letterDay: "A", periodName: "AP Computer Science", periodNumber: 4, timeRange: "10:40 - 11:30"),
+        .init(id: 4, letterDay: "A", periodName: "Military Science", periodNumber: 5, timeRange: "11:30 - 12:20"),
+        .init(id: 5, letterDay: "A", periodName: "Lunch", periodNumber: 6, timeRange: "12:20 - 1:10"),
+        .init(id: 6, letterDay: "A", periodName: "AP English 11", periodNumber: 7, timeRange: "1:10 - 1:50"),
+        .init(id: 7, letterDay: "A", periodName: "Calculus", periodNumber: 8, timeRange: "1:50 - 2:40")
     ]
     
     var body: some View{
@@ -353,8 +354,12 @@ struct MiscCard: View{
                                 {
                                     VStack(alignment: .leading){
                                         HStack{
+                                            Spacer()
+                                                .frame(width: g.size.width/5)
+                                            
                                             VStack(alignment: .leading){
-                                                
+                                               
+                                                    
                                                 //MiscName
                                                 //padNum = 100 - misc.topicName
                                                 Text(misc.topicName)
@@ -362,6 +367,7 @@ struct MiscCard: View{
                                                     .fontWeight(.medium)
                                                     .padding(.leading, 20)
                                                     .fixedSize()
+                                                    .frame(width: g.size.width/5)
                                                     
                                                     //.background(Color.red)
                                                     
@@ -370,8 +376,9 @@ struct MiscCard: View{
                                                 Text(misc.subtopicName)
                                                     .foregroundColor(Color("mediumMaroon"))
                                                     .font(.custom("Helvetica Neue-Thin", size: 20))
-                                                    .padding(.leading, 20)
+                                                    .padding(.leading, 0)
                                                     .fixedSize()
+                                                    .frame(width: g.size.width/5)
                                                     .padding(.trailing, 80)
                                                     //.background(Color.blue)
                                             }

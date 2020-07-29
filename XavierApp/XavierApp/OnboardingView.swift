@@ -93,7 +93,11 @@ struct ScanDocumentView: UIViewControllerRepresentable {
             
             recognizeTextRequest.recognitionLevel = .accurate
             recognizeTextRequest.usesLanguageCorrection = true
-            recognizeTextRequest.revision = VNRecognizeTextRequestRevision2
+            if #available(iOS 14.0, *) {
+                recognizeTextRequest.revision = VNRecognizeTextRequestRevision2
+            } else {
+                // Fallback on earlier versions
+            }
 
             recognizeTextRequest.customWords = ["2019"]
             recognizeTextRequest.minimumTextHeight = 0.3//Text bigger than 30% of the image height
@@ -536,7 +540,8 @@ struct PageThree: View {
                                     //.position(x: 210, y: -100)
                                     .font(.largeTitle)
                                     .foregroundColor(.white)
-                                    
+                                
+                                    //ZSTACK OCR HERERERERERE
                                 }
                                 //.background(Color.purple)
                                 .frame(width: gr.size.width, height: gr.size.height/4)
@@ -619,7 +624,7 @@ struct PageThree: View {
                             
                             ZStack{
                                 //Next Button
-                                NavigationLink(destination: MotherView().navigationBarBackButtonHidden(true)){
+                                NavigationLink(destination: pageFour().navigationBarBackButtonHidden(true)){
                                     Text("Next")
                                     Image(systemName: "chevron.right")
                                 }
@@ -662,6 +667,126 @@ struct PageThree: View {
 }
 
 }
+    
+    struct pageFour: View{
+        var body: some View {
+            
+            NavigationView{
+                
+                VStack{
+                                    
+                    ZStack(){
+                            //Background Color
+                            ZStack{
+                            Color
+                                .init(red: 132/255, green: 49/255, blue: 80/255)
+                                .edgesIgnoringSafeArea(.all)
+                            }
+                            
+                            
+                        GeometryReader { gr in
+                            VStack{
+                                //2nd Page
+                                ZStack{
+                                    Text("Getting Started")
+                                        .bold()
+                                        //.position(x: 210, y: -100)
+                                        .font(.largeTitle)
+                                        .foregroundColor(.white)
+                                    
+                                    }
+                                    //.background(Color.purple)
+                                    .frame(width: gr.size.width, height: gr.size.height/4)
+                                    Divider()
+                                    Divider()
+                                
+                                VStack{
+                                    Text("")
+                                }
+                                        
+                               
+                               
+                                VStack{
+                                ZStack{
+                                        
+                                    //1..2...3.... buttons
+                                    HStack(){
+                                        Button(action: {
+                                             
+                                        }) {
+                                            Image(systemName: "1.circle")
+                                                .padding()
+                                                .scaleEffect(0.65)
+                                        }
+                                        Button(action: {
+
+                                        }) {
+                                            Image(systemName: "2.circle")
+                                                .padding()
+                                                .scaleEffect(0.65)
+                                        }
+                                        Button(action: {
+
+                                        }) {
+                                            Image(systemName: "3.circle")
+                                                .padding()
+                                                .scaleEffect(1)
+                                        }
+                                            
+                                    }
+                                    .animation(.spring(response: 0.4, dampingFraction: 0.5))
+                                    .font(.largeTitle)
+                                    .accentColor(Color.white)
+                                }
+                                }
+                                //.background(Color.red)
+                                .frame(width: gr.size.width, height: gr.size.height/4)
+                                
+                                ZStack{
+                                    //Next Button
+                                    NavigationLink(destination: MotherView().navigationBarBackButtonHidden(true)){
+                                        Text("Next")
+                                        Image(systemName: "chevron.right")
+                                    }
+                                    .padding(.horizontal)
+                                    .padding()
+                                    .accentColor(Color.white)
+                                    .background(Capsule().fill(Color("Blue")))
+                                    .opacity(1)
+                                    .animation(.none)
+                                    .scaleEffect(1)
+                                    //.position(x: 210, y: 100)
+                                    .animation(Animation.interpolatingSpring(stiffness: 50, damping: 10, initialVelocity: 10))
+                            
+                                }
+                                //.background(Color.green)
+                                .frame(width: gr.size.width, height: gr.size.height/25)
+                                        
+                            
+                            
+                            
+                                    
+                                    
+                                    
+                        }
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                        .hiddenNavigationBarStyle()
+                        
+                        
+                           
+                           
+                              
+                        }
+                            
+                    }
+                
+        }
+                
+        }
+            
+    }
+    }
+    
 
 
 
