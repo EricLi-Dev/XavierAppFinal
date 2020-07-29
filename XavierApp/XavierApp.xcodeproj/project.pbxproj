@@ -7,82 +7,86 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1372591924A3F60000364C14 /* XavierAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372591824A3F60000364C14 /* XavierAppApp.swift */; };
-		1372591B24A3F60000364C14 /* studentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372591A24A3F60000364C14 /* studentView.swift */; };
-		1372591D24A3F60100364C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591C24A3F60100364C14 /* Assets.xcassets */; };
-		1372592024A3F60100364C14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591F24A3F60100364C14 /* Preview Assets.xcassets */; };
-		1372592B24A3F60100364C14 /* XavierAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372592A24A3F60100364C14 /* XavierAppTests.swift */; };
-		1372593624A3F60100364C14 /* XavierAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372593524A3F60100364C14 /* XavierAppUITests.swift */; };
-		137C381A24A5B7DB002F6D19 /* backgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C381924A5B7DB002F6D19 /* backgroundView.swift */; };
-		13EF942324C941A1006F898B /* menuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EF942224C941A1006F898B /* menuView.swift */; };
-		13EF942624CA438E006F898B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EF942524CA438E006F898B /* WebView.swift */; };
-		A70478A024B6ACE7002D463D /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704789F24B6ACE7002D463D /* UserSettings.swift */; };
-		A742AFAB24BD015A003B229D /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAA24BD015A003B229D /* ViewRouter.swift */; };
-		A742AFAD24BD0213003B229D /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAC24BD0213003B229D /* MotherView.swift */; };
-		A742AFAF24BD0AD4003B229D /* parentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAE24BD0AD4003B229D /* parentView.swift */; };
-		A74445AC24AE7871004ECE1B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74445AB24AE7871004ECE1B /* CarouselView.swift */; };
-		A7687FCA24ABB1E4006E1D2D /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7687FC924ABB1E4006E1D2D /* cardView.swift */; };
-		A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78BF1E224A404810008C7FC /* OnboardingView.swift */; };
+		138A719524D2207B004052D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A719424D2207B004052D0 /* AppDelegate.swift */; };
+		138A719724D2207B004052D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A719624D2207B004052D0 /* SceneDelegate.swift */; };
+		138A719B24D2207D004052D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 138A719A24D2207D004052D0 /* Assets.xcassets */; };
+		138A719E24D2207D004052D0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 138A719D24D2207D004052D0 /* Preview Assets.xcassets */; };
+		138A71A124D2207D004052D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 138A719F24D2207D004052D0 /* LaunchScreen.storyboard */; };
+		138A71AC24D2207D004052D0 /* XavierAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71AB24D2207D004052D0 /* XavierAppTests.swift */; };
+		138A71B724D2207D004052D0 /* XavierAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71B624D2207D004052D0 /* XavierAppUITests.swift */; };
+		138A71CF24D220BE004052D0 /* menuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71C424D220BD004052D0 /* menuView.swift */; };
+		138A71D024D220BE004052D0 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71C524D220BD004052D0 /* CarouselView.swift */; };
+		138A71D124D220BE004052D0 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71C624D220BD004052D0 /* OnboardingView.swift */; };
+		138A71D224D220BE004052D0 /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71C724D220BD004052D0 /* MotherView.swift */; };
+		138A71D324D220BE004052D0 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71C824D220BD004052D0 /* UserSettings.swift */; };
+		138A71D424D220BE004052D0 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71C924D220BD004052D0 /* WebView.swift */; };
+		138A71D524D220BE004052D0 /* studentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71CA24D220BD004052D0 /* studentView.swift */; };
+		138A71D624D220BE004052D0 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71CB24D220BE004052D0 /* ViewRouter.swift */; };
+		138A71D724D220BE004052D0 /* backgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71CC24D220BE004052D0 /* backgroundView.swift */; };
+		138A71D824D220BE004052D0 /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71CD24D220BE004052D0 /* cardView.swift */; };
+		138A71D924D220BE004052D0 /* parentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138A71CE24D220BE004052D0 /* parentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1372592724A3F60100364C14 /* PBXContainerItemProxy */ = {
+		138A71A824D2207D004052D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1372590D24A3F60000364C14 /* Project object */;
+			containerPortal = 138A718924D2207B004052D0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1372591424A3F60000364C14;
+			remoteGlobalIDString = 138A719024D2207B004052D0;
 			remoteInfo = XavierApp;
 		};
-		1372593224A3F60100364C14 /* PBXContainerItemProxy */ = {
+		138A71B324D2207D004052D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1372590D24A3F60000364C14 /* Project object */;
+			containerPortal = 138A718924D2207B004052D0 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1372591424A3F60000364C14;
+			remoteGlobalIDString = 138A719024D2207B004052D0;
 			remoteInfo = XavierApp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1372591524A3F60000364C14 /* XavierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XavierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1372591824A3F60000364C14 /* XavierAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppApp.swift; sourceTree = "<group>"; };
-		1372591A24A3F60000364C14 /* studentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentView.swift; sourceTree = "<group>"; };
-		1372591C24A3F60100364C14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1372591F24A3F60100364C14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1372592124A3F60100364C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1372592624A3F60100364C14 /* XavierAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XavierAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1372592A24A3F60100364C14 /* XavierAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppTests.swift; sourceTree = "<group>"; };
-		1372592C24A3F60100364C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1372593124A3F60100364C14 /* XavierAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XavierAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1372593524A3F60100364C14 /* XavierAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppUITests.swift; sourceTree = "<group>"; };
-		1372593724A3F60100364C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		137C381924A5B7DB002F6D19 /* backgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundView.swift; sourceTree = "<group>"; };
-		13EF942224C941A1006F898B /* menuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuView.swift; sourceTree = "<group>"; };
-		13EF942524CA438E006F898B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		A704789F24B6ACE7002D463D /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
-		A742AFAA24BD015A003B229D /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
-		A742AFAC24BD0213003B229D /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
-		A742AFAE24BD0AD4003B229D /* parentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parentView.swift; sourceTree = "<group>"; };
-		A74445AB24AE7871004ECE1B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
-		A7687FC924ABB1E4006E1D2D /* cardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
-		A78BF1E224A404810008C7FC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		138A719124D2207B004052D0 /* XavierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XavierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		138A719424D2207B004052D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		138A719624D2207B004052D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		138A719A24D2207D004052D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		138A719D24D2207D004052D0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		138A71A024D2207D004052D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		138A71A224D2207D004052D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		138A71A724D2207D004052D0 /* XavierAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XavierAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		138A71AB24D2207D004052D0 /* XavierAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppTests.swift; sourceTree = "<group>"; };
+		138A71AD24D2207D004052D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		138A71B224D2207D004052D0 /* XavierAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XavierAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		138A71B624D2207D004052D0 /* XavierAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppUITests.swift; sourceTree = "<group>"; };
+		138A71B824D2207D004052D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		138A71C424D220BD004052D0 /* menuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = menuView.swift; sourceTree = "<group>"; };
+		138A71C524D220BD004052D0 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		138A71C624D220BD004052D0 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		138A71C724D220BD004052D0 /* MotherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
+		138A71C824D220BD004052D0 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		138A71C924D220BD004052D0 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		138A71CA24D220BD004052D0 /* studentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = studentView.swift; sourceTree = "<group>"; };
+		138A71CB24D220BE004052D0 /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		138A71CC24D220BE004052D0 /* backgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = backgroundView.swift; sourceTree = "<group>"; };
+		138A71CD24D220BE004052D0 /* cardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
+		138A71CE24D220BE004052D0 /* parentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1372591224A3F60000364C14 /* Frameworks */ = {
+		138A718E24D2207B004052D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1372592324A3F60100364C14 /* Frameworks */ = {
+		138A71A424D2207D004052D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1372592E24A3F60100364C14 /* Frameworks */ = {
+		138A71AF24D2207D004052D0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -92,70 +96,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1372590C24A3F60000364C14 = {
+		138A718824D2207B004052D0 = {
 			isa = PBXGroup;
 			children = (
-				1372591724A3F60000364C14 /* XavierApp */,
-				1372592924A3F60100364C14 /* XavierAppTests */,
-				1372593424A3F60100364C14 /* XavierAppUITests */,
-				1372591624A3F60000364C14 /* Products */,
+				138A719324D2207B004052D0 /* XavierApp */,
+				138A71AA24D2207D004052D0 /* XavierAppTests */,
+				138A71B524D2207D004052D0 /* XavierAppUITests */,
+				138A719224D2207B004052D0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		1372591624A3F60000364C14 /* Products */ = {
+		138A719224D2207B004052D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1372591524A3F60000364C14 /* XavierApp.app */,
-				1372592624A3F60100364C14 /* XavierAppTests.xctest */,
-				1372593124A3F60100364C14 /* XavierAppUITests.xctest */,
+				138A719124D2207B004052D0 /* XavierApp.app */,
+				138A71A724D2207D004052D0 /* XavierAppTests.xctest */,
+				138A71B224D2207D004052D0 /* XavierAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1372591724A3F60000364C14 /* XavierApp */ = {
+		138A719324D2207B004052D0 /* XavierApp */ = {
 			isa = PBXGroup;
 			children = (
-				1372591824A3F60000364C14 /* XavierAppApp.swift */,
-				A742AFAC24BD0213003B229D /* MotherView.swift */,
-				A742AFAA24BD015A003B229D /* ViewRouter.swift */,
-				A78BF1E224A404810008C7FC /* OnboardingView.swift */,
-				A704789F24B6ACE7002D463D /* UserSettings.swift */,
-				A74445AB24AE7871004ECE1B /* CarouselView.swift */,
-				1372591A24A3F60000364C14 /* studentView.swift */,
-				13EF942524CA438E006F898B /* WebView.swift */,
-				A742AFAE24BD0AD4003B229D /* parentView.swift */,
-				A7687FC924ABB1E4006E1D2D /* cardView.swift */,
-				137C381924A5B7DB002F6D19 /* backgroundView.swift */,
-				13EF942224C941A1006F898B /* menuView.swift */,
-				1372591C24A3F60100364C14 /* Assets.xcassets */,
-				1372592124A3F60100364C14 /* Info.plist */,
-				1372591E24A3F60100364C14 /* Preview Content */,
+				138A719424D2207B004052D0 /* AppDelegate.swift */,
+				138A719624D2207B004052D0 /* SceneDelegate.swift */,
+				138A719A24D2207D004052D0 /* Assets.xcassets */,
+				138A719F24D2207D004052D0 /* LaunchScreen.storyboard */,
+				138A71CC24D220BE004052D0 /* backgroundView.swift */,
+				138A71CD24D220BE004052D0 /* cardView.swift */,
+				138A71C524D220BD004052D0 /* CarouselView.swift */,
+				138A71C424D220BD004052D0 /* menuView.swift */,
+				138A71C724D220BD004052D0 /* MotherView.swift */,
+				138A71C624D220BD004052D0 /* OnboardingView.swift */,
+				138A71CE24D220BE004052D0 /* parentView.swift */,
+				138A71CA24D220BD004052D0 /* studentView.swift */,
+				138A71C824D220BD004052D0 /* UserSettings.swift */,
+				138A71CB24D220BE004052D0 /* ViewRouter.swift */,
+				138A71C924D220BD004052D0 /* WebView.swift */,
+				138A71A224D2207D004052D0 /* Info.plist */,
+				138A719C24D2207D004052D0 /* Preview Content */,
 			);
 			path = XavierApp;
 			sourceTree = "<group>";
 		};
-		1372591E24A3F60100364C14 /* Preview Content */ = {
+		138A719C24D2207D004052D0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				1372591F24A3F60100364C14 /* Preview Assets.xcassets */,
+				138A719D24D2207D004052D0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		1372592924A3F60100364C14 /* XavierAppTests */ = {
+		138A71AA24D2207D004052D0 /* XavierAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				1372592A24A3F60100364C14 /* XavierAppTests.swift */,
-				1372592C24A3F60100364C14 /* Info.plist */,
+				138A71AB24D2207D004052D0 /* XavierAppTests.swift */,
+				138A71AD24D2207D004052D0 /* Info.plist */,
 			);
 			path = XavierAppTests;
 			sourceTree = "<group>";
 		};
-		1372593424A3F60100364C14 /* XavierAppUITests */ = {
+		138A71B524D2207D004052D0 /* XavierAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				1372593524A3F60100364C14 /* XavierAppUITests.swift */,
-				1372593724A3F60100364C14 /* Info.plist */,
+				138A71B624D2207D004052D0 /* XavierAppUITests.swift */,
+				138A71B824D2207D004052D0 /* Info.plist */,
 			);
 			path = XavierAppUITests;
 			sourceTree = "<group>";
@@ -163,13 +169,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1372591424A3F60000364C14 /* XavierApp */ = {
+		138A719024D2207B004052D0 /* XavierApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1372593A24A3F60100364C14 /* Build configuration list for PBXNativeTarget "XavierApp" */;
+			buildConfigurationList = 138A71BB24D2207D004052D0 /* Build configuration list for PBXNativeTarget "XavierApp" */;
 			buildPhases = (
-				1372591124A3F60000364C14 /* Sources */,
-				1372591224A3F60000364C14 /* Frameworks */,
-				1372591324A3F60000364C14 /* Resources */,
+				138A718D24D2207B004052D0 /* Sources */,
+				138A718E24D2207B004052D0 /* Frameworks */,
+				138A718F24D2207B004052D0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -177,68 +183,68 @@
 			);
 			name = XavierApp;
 			productName = XavierApp;
-			productReference = 1372591524A3F60000364C14 /* XavierApp.app */;
+			productReference = 138A719124D2207B004052D0 /* XavierApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1372592524A3F60100364C14 /* XavierAppTests */ = {
+		138A71A624D2207D004052D0 /* XavierAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1372593D24A3F60100364C14 /* Build configuration list for PBXNativeTarget "XavierAppTests" */;
+			buildConfigurationList = 138A71BE24D2207D004052D0 /* Build configuration list for PBXNativeTarget "XavierAppTests" */;
 			buildPhases = (
-				1372592224A3F60100364C14 /* Sources */,
-				1372592324A3F60100364C14 /* Frameworks */,
-				1372592424A3F60100364C14 /* Resources */,
+				138A71A324D2207D004052D0 /* Sources */,
+				138A71A424D2207D004052D0 /* Frameworks */,
+				138A71A524D2207D004052D0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1372592824A3F60100364C14 /* PBXTargetDependency */,
+				138A71A924D2207D004052D0 /* PBXTargetDependency */,
 			);
 			name = XavierAppTests;
 			productName = XavierAppTests;
-			productReference = 1372592624A3F60100364C14 /* XavierAppTests.xctest */;
+			productReference = 138A71A724D2207D004052D0 /* XavierAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1372593024A3F60100364C14 /* XavierAppUITests */ = {
+		138A71B124D2207D004052D0 /* XavierAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1372594024A3F60100364C14 /* Build configuration list for PBXNativeTarget "XavierAppUITests" */;
+			buildConfigurationList = 138A71C124D2207D004052D0 /* Build configuration list for PBXNativeTarget "XavierAppUITests" */;
 			buildPhases = (
-				1372592D24A3F60100364C14 /* Sources */,
-				1372592E24A3F60100364C14 /* Frameworks */,
-				1372592F24A3F60100364C14 /* Resources */,
+				138A71AE24D2207D004052D0 /* Sources */,
+				138A71AF24D2207D004052D0 /* Frameworks */,
+				138A71B024D2207D004052D0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1372593324A3F60100364C14 /* PBXTargetDependency */,
+				138A71B424D2207D004052D0 /* PBXTargetDependency */,
 			);
 			name = XavierAppUITests;
 			productName = XavierAppUITests;
-			productReference = 1372593124A3F60100364C14 /* XavierAppUITests.xctest */;
+			productReference = 138A71B224D2207D004052D0 /* XavierAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1372590D24A3F60000364C14 /* Project object */ = {
+		138A718924D2207B004052D0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
-					1372591424A3F60000364C14 = {
+					138A719024D2207B004052D0 = {
 						CreatedOnToolsVersion = 12.0;
 					};
-					1372592524A3F60100364C14 = {
+					138A71A624D2207D004052D0 = {
 						CreatedOnToolsVersion = 12.0;
-						TestTargetID = 1372591424A3F60000364C14;
+						TestTargetID = 138A719024D2207B004052D0;
 					};
-					1372593024A3F60100364C14 = {
+					138A71B124D2207D004052D0 = {
 						CreatedOnToolsVersion = 12.0;
-						TestTargetID = 1372591424A3F60000364C14;
+						TestTargetID = 138A719024D2207B004052D0;
 					};
 				};
 			};
-			buildConfigurationList = 1372591024A3F60000364C14 /* Build configuration list for PBXProject "XavierApp" */;
+			buildConfigurationList = 138A718C24D2207B004052D0 /* Build configuration list for PBXProject "XavierApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -246,36 +252,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 1372590C24A3F60000364C14;
-			productRefGroup = 1372591624A3F60000364C14 /* Products */;
+			mainGroup = 138A718824D2207B004052D0;
+			productRefGroup = 138A719224D2207B004052D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1372591424A3F60000364C14 /* XavierApp */,
-				1372592524A3F60100364C14 /* XavierAppTests */,
-				1372593024A3F60100364C14 /* XavierAppUITests */,
+				138A719024D2207B004052D0 /* XavierApp */,
+				138A71A624D2207D004052D0 /* XavierAppTests */,
+				138A71B124D2207D004052D0 /* XavierAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1372591324A3F60000364C14 /* Resources */ = {
+		138A718F24D2207B004052D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1372592024A3F60100364C14 /* Preview Assets.xcassets in Resources */,
-				1372591D24A3F60100364C14 /* Assets.xcassets in Resources */,
+				138A71A124D2207D004052D0 /* LaunchScreen.storyboard in Resources */,
+				138A719E24D2207D004052D0 /* Preview Assets.xcassets in Resources */,
+				138A719B24D2207D004052D0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1372592424A3F60100364C14 /* Resources */ = {
+		138A71A524D2207D004052D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1372592F24A3F60100364C14 /* Resources */ = {
+		138A71B024D2207D004052D0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,58 +292,70 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1372591124A3F60000364C14 /* Sources */ = {
+		138A718D24D2207B004052D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A74445AC24AE7871004ECE1B /* CarouselView.swift in Sources */,
-				A742AFAD24BD0213003B229D /* MotherView.swift in Sources */,
-				A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */,
-				1372591B24A3F60000364C14 /* studentView.swift in Sources */,
-				A70478A024B6ACE7002D463D /* UserSettings.swift in Sources */,
-				A742AFAF24BD0AD4003B229D /* parentView.swift in Sources */,
-				1372591924A3F60000364C14 /* XavierAppApp.swift in Sources */,
-				137C381A24A5B7DB002F6D19 /* backgroundView.swift in Sources */,
-				A742AFAB24BD015A003B229D /* ViewRouter.swift in Sources */,
-				13EF942624CA438E006F898B /* WebView.swift in Sources */,
-				A7687FCA24ABB1E4006E1D2D /* cardView.swift in Sources */,
-				13EF942324C941A1006F898B /* menuView.swift in Sources */,
+				138A71CF24D220BE004052D0 /* menuView.swift in Sources */,
+				138A71D424D220BE004052D0 /* WebView.swift in Sources */,
+				138A71D724D220BE004052D0 /* backgroundView.swift in Sources */,
+				138A71D224D220BE004052D0 /* MotherView.swift in Sources */,
+				138A719524D2207B004052D0 /* AppDelegate.swift in Sources */,
+				138A71D924D220BE004052D0 /* parentView.swift in Sources */,
+				138A71D024D220BE004052D0 /* CarouselView.swift in Sources */,
+				138A71D824D220BE004052D0 /* cardView.swift in Sources */,
+				138A71D624D220BE004052D0 /* ViewRouter.swift in Sources */,
+				138A71D524D220BE004052D0 /* studentView.swift in Sources */,
+				138A71D324D220BE004052D0 /* UserSettings.swift in Sources */,
+				138A71D124D220BE004052D0 /* OnboardingView.swift in Sources */,
+				138A719724D2207B004052D0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1372592224A3F60100364C14 /* Sources */ = {
+		138A71A324D2207D004052D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1372592B24A3F60100364C14 /* XavierAppTests.swift in Sources */,
+				138A71AC24D2207D004052D0 /* XavierAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1372592D24A3F60100364C14 /* Sources */ = {
+		138A71AE24D2207D004052D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1372593624A3F60100364C14 /* XavierAppUITests.swift in Sources */,
+				138A71B724D2207D004052D0 /* XavierAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1372592824A3F60100364C14 /* PBXTargetDependency */ = {
+		138A71A924D2207D004052D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1372591424A3F60000364C14 /* XavierApp */;
-			targetProxy = 1372592724A3F60100364C14 /* PBXContainerItemProxy */;
+			target = 138A719024D2207B004052D0 /* XavierApp */;
+			targetProxy = 138A71A824D2207D004052D0 /* PBXContainerItemProxy */;
 		};
-		1372593324A3F60100364C14 /* PBXTargetDependency */ = {
+		138A71B424D2207D004052D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1372591424A3F60000364C14 /* XavierApp */;
-			targetProxy = 1372593224A3F60100364C14 /* PBXContainerItemProxy */;
+			target = 138A719024D2207B004052D0 /* XavierApp */;
+			targetProxy = 138A71B324D2207D004052D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		138A719F24D2207D004052D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				138A71A024D2207D004052D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		1372593824A3F60100364C14 /* Debug */ = {
+		138A71B924D2207D004052D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -397,7 +416,7 @@
 			};
 			name = Debug;
 		};
-		1372593924A3F60100364C14 /* Release */ = {
+		138A71BA24D2207D004052D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -452,55 +471,51 @@
 			};
 			name = Release;
 		};
-		1372593B24A3F60100364C14 /* Debug */ = {
+		138A71BC24D2207D004052D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = XavierApp/XavierApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"XavierApp/Preview Content\"";
 				DEVELOPMENT_TEAM = B9K3VJMSNM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = XavierApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp12;
+				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		1372593C24A3F60100364C14 /* Release */ = {
+		138A71BD24D2207D004052D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = XavierApp/XavierApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"XavierApp/Preview Content\"";
 				DEVELOPMENT_TEAM = B9K3VJMSNM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = XavierApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp12;
+				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		1372593E24A3F60100364C14 /* Debug */ = {
+		138A71BF24D2207D004052D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -522,7 +537,7 @@
 			};
 			name = Debug;
 		};
-		1372593F24A3F60100364C14 /* Release */ = {
+		138A71C024D2207D004052D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -544,7 +559,7 @@
 			};
 			name = Release;
 		};
-		1372594124A3F60100364C14 /* Debug */ = {
+		138A71C224D2207D004052D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -564,7 +579,7 @@
 			};
 			name = Debug;
 		};
-		1372594224A3F60100364C14 /* Release */ = {
+		138A71C324D2207D004052D0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -587,43 +602,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1372591024A3F60000364C14 /* Build configuration list for PBXProject "XavierApp" */ = {
+		138A718C24D2207B004052D0 /* Build configuration list for PBXProject "XavierApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1372593824A3F60100364C14 /* Debug */,
-				1372593924A3F60100364C14 /* Release */,
+				138A71B924D2207D004052D0 /* Debug */,
+				138A71BA24D2207D004052D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1372593A24A3F60100364C14 /* Build configuration list for PBXNativeTarget "XavierApp" */ = {
+		138A71BB24D2207D004052D0 /* Build configuration list for PBXNativeTarget "XavierApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1372593B24A3F60100364C14 /* Debug */,
-				1372593C24A3F60100364C14 /* Release */,
+				138A71BC24D2207D004052D0 /* Debug */,
+				138A71BD24D2207D004052D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1372593D24A3F60100364C14 /* Build configuration list for PBXNativeTarget "XavierAppTests" */ = {
+		138A71BE24D2207D004052D0 /* Build configuration list for PBXNativeTarget "XavierAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1372593E24A3F60100364C14 /* Debug */,
-				1372593F24A3F60100364C14 /* Release */,
+				138A71BF24D2207D004052D0 /* Debug */,
+				138A71C024D2207D004052D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1372594024A3F60100364C14 /* Build configuration list for PBXNativeTarget "XavierAppUITests" */ = {
+		138A71C124D2207D004052D0 /* Build configuration list for PBXNativeTarget "XavierAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1372594124A3F60100364C14 /* Debug */,
-				1372594224A3F60100364C14 /* Release */,
+				138A71C224D2207D004052D0 /* Debug */,
+				138A71C324D2207D004052D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1372590D24A3F60000364C14 /* Project object */;
+	rootObject = 138A718924D2207B004052D0 /* Project object */;
 }
