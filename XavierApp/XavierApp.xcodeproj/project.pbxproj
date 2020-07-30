@@ -21,12 +21,14 @@
 		A742AFAD24BD0213003B229D /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAC24BD0213003B229D /* MotherView.swift */; };
 		A742AFAF24BD0AD4003B229D /* parentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAE24BD0AD4003B229D /* parentView.swift */; };
 		A74445AC24AE7871004ECE1B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74445AB24AE7871004ECE1B /* CarouselView.swift */; };
-		A74F441F24CB530A00C75699 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74F441E24CB530A00C75699 /* test.swift */; };
 		A7687FCA24ABB1E4006E1D2D /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7687FC924ABB1E4006E1D2D /* cardView.swift */; };
 		A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78BF1E224A404810008C7FC /* OnboardingView.swift */; };
+<<<<<<< HEAD
 		A7E445B624CCCF5C00375249 /* scheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E445B524CCCF5C00375249 /* scheduleData.swift */; };
 		A7E445B824D22AC800375249 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E445B724D22AC800375249 /* AppDelegate.swift */; };
 		A7FBF6CD24D23203007C29BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBF6CC24D23203007C29BA /* SceneDelegate.swift */; };
+=======
+>>>>>>> parent of 26ed979... Schedule Edit Page
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,12 +69,14 @@
 		A742AFAC24BD0213003B229D /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
 		A742AFAE24BD0AD4003B229D /* parentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = parentView.swift; sourceTree = "<group>"; };
 		A74445AB24AE7871004ECE1B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
-		A74F441E24CB530A00C75699 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		A7687FC924ABB1E4006E1D2D /* cardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
 		A78BF1E224A404810008C7FC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		A7E445B524CCCF5C00375249 /* scheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleData.swift; sourceTree = "<group>"; };
 		A7E445B724D22AC800375249 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7FBF6CC24D23203007C29BA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> parent of 26ed979... Schedule Edit Page
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +133,6 @@
 				A742AFAC24BD0213003B229D /* MotherView.swift */,
 				A742AFAA24BD015A003B229D /* ViewRouter.swift */,
 				A78BF1E224A404810008C7FC /* OnboardingView.swift */,
-				A74F441E24CB530A00C75699 /* test.swift */,
-				A7E445B524CCCF5C00375249 /* scheduleData.swift */,
 				A704789F24B6ACE7002D463D /* UserSettings.swift */,
 				A74445AB24AE7871004ECE1B /* CarouselView.swift */,
 				1372591A24A3F60000364C14 /* studentView.swift */,
@@ -305,16 +307,18 @@
 				A742AFAD24BD0213003B229D /* MotherView.swift in Sources */,
 				1352431024D33CBD00874505 /* ContentView.swift in Sources */,
 				A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */,
+<<<<<<< HEAD
 				A7E445B824D22AC800375249 /* AppDelegate.swift in Sources */,
 				A74F441F24CB530A00C75699 /* test.swift in Sources */,
 				A7FBF6CD24D23203007C29BA /* SceneDelegate.swift in Sources */,
+=======
+>>>>>>> parent of 26ed979... Schedule Edit Page
 				1372591B24A3F60000364C14 /* studentView.swift in Sources */,
 				A70478A024B6ACE7002D463D /* UserSettings.swift in Sources */,
 				A742AFAF24BD0AD4003B229D /* parentView.swift in Sources */,
 				137C381A24A5B7DB002F6D19 /* backgroundView.swift in Sources */,
 				A742AFAB24BD015A003B229D /* ViewRouter.swift in Sources */,
 				13EF942624CA438E006F898B /* WebView.swift in Sources */,
-				A7E445B624CCCF5C00375249 /* scheduleData.swift in Sources */,
 				A7687FCA24ABB1E4006E1D2D /* cardView.swift in Sources */,
 				13EF942324C941A1006F898B /* menuView.swift in Sources */,
 			);
@@ -476,7 +480,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"XavierApp/Preview Content\"";
-				DEVELOPMENT_TEAM = SVAHMLZR95;
+				DEVELOPMENT_TEAM = B9K3VJMSNM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = XavierApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -484,7 +488,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp1;
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp12;
+>>>>>>> parent of 26ed979... Schedule Edit Page
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -500,7 +508,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"XavierApp/Preview Content\"";
-				DEVELOPMENT_TEAM = SVAHMLZR95;
+				DEVELOPMENT_TEAM = B9K3VJMSNM;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = XavierApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
@@ -508,7 +516,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< HEAD
 				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp1;
+=======
+				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp12;
+>>>>>>> parent of 26ed979... Schedule Edit Page
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;

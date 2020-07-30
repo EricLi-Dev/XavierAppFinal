@@ -56,8 +56,10 @@ struct parentView: View {
                                                  ),
                                                  AnyView(
                                                      CalendarCard()
-                                                 )
-                                                 
+                                                 ),
+                                                 AnyView(
+                                                     PPCard()
+                                                 ),
 
                                              ])
                             }
@@ -69,7 +71,7 @@ struct parentView: View {
             }
         
         }
-        .hiddenNavigationBarStyle()
+        // .hiddenNavigationBarStyle()
     }
 }
 
