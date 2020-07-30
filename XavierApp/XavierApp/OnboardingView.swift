@@ -93,16 +93,12 @@ struct ScanDocumentView: UIViewControllerRepresentable {
             
             recognizeTextRequest.recognitionLevel = .accurate
             recognizeTextRequest.usesLanguageCorrection = true
-<<<<<<< HEAD
             if #available(iOS 14.0, *) {
                 recognizeTextRequest.revision = VNRecognizeTextRequestRevision2
             } else {
                 // Fallback on earlier versions
                 recognizeTextRequest.revision = VNRecognizeTextRequestRevision1
             }
-=======
-            recognizeTextRequest.revision = VNRecognizeTextRequestRevision2
->>>>>>> parent of 26ed979... Schedule Edit Page
 
             recognizeTextRequest.customWords = ["2019"]
             recognizeTextRequest.minimumTextHeight = 0.3//Text bigger than 30% of the image height
@@ -628,11 +624,7 @@ struct PageThree: View {
                             
                             ZStack{
                                 //Next Button
-<<<<<<< HEAD
                                 NavigationLink(destination: studentView().navigationBarBackButtonHidden(true)){
-=======
-                                NavigationLink(destination: MotherView().navigationBarBackButtonHidden(true)){
->>>>>>> parent of 26ed979... Schedule Edit Page
                                     Text("Next")
                                     Image(systemName: "chevron.right")
                                 }
