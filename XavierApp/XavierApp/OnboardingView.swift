@@ -93,12 +93,7 @@ struct ScanDocumentView: UIViewControllerRepresentable {
             
             recognizeTextRequest.recognitionLevel = .accurate
             recognizeTextRequest.usesLanguageCorrection = true
-            if #available(iOS 14.0, *) {
-                recognizeTextRequest.revision = VNRecognizeTextRequestRevision2
-            } else {
-                // Fallback on earlier versions
-                recognizeTextRequest.revision = VNRecognizeTextRequestRevision1
-            }
+            recognizeTextRequest.revision = VNRecognizeTextRequestRevision2
 
             recognizeTextRequest.customWords = ["2019"]
             recognizeTextRequest.minimumTextHeight = 0.3//Text bigger than 30% of the image height

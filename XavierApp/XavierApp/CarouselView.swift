@@ -127,21 +127,7 @@ struct CarouselView: View {
                     .padding(.bottom)
                 Spacer()
             }
-            VStack {
-                Text("")
-                    .padding(.bottom)
-                Spacer()
-            }
-            VStack {
-                Text("")
-                    .padding(.bottom)
-                Spacer()
-            }
-            VStack {
-                Text("")
-                    .padding(.bottom)
-                Spacer()
-            }
+
             // MARK: HERE
 
             VStack {
@@ -178,12 +164,7 @@ struct CarouselView: View {
 
                 Spacer()
             }.zIndex(-100)
-            VStack {
-                Text("")
-                    .padding(.bottom)
-                Spacer()
-            }
-         
+
             // PageIndicators
             GeometryReader { geo in
                 VStack {
