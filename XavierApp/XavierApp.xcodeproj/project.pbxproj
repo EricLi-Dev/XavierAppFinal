@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1352431024D33CBD00874505 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352430F24D33CBD00874505 /* ContentView.swift */; };
 		1372591B24A3F60000364C14 /* studentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372591A24A3F60000364C14 /* studentView.swift */; };
 		1372591D24A3F60100364C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591C24A3F60100364C14 /* Assets.xcassets */; };
 		1372592024A3F60100364C14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591F24A3F60100364C14 /* Preview Assets.xcassets */; };
@@ -47,7 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1352430F24D33CBD00874505 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../../../../../TestAppXavier/TestAppXavier/ContentView.swift; sourceTree = "<group>"; };
 		1372591524A3F60000364C14 /* XavierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XavierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1372591A24A3F60000364C14 /* studentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentView.swift; sourceTree = "<group>"; };
 		1372591C24A3F60100364C14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 			children = (
 				A7E445B724D22AC800375249 /* AppDelegate.swift */,
 				A7FBF6CC24D23203007C29BA /* SceneDelegate.swift */,
-				1352430F24D33CBD00874505 /* ContentView.swift */,
 				A742AFAC24BD0213003B229D /* MotherView.swift */,
 				A742AFAA24BD015A003B229D /* ViewRouter.swift */,
 				A78BF1E224A404810008C7FC /* OnboardingView.swift */,
@@ -303,7 +300,6 @@
 			files = (
 				A74445AC24AE7871004ECE1B /* CarouselView.swift in Sources */,
 				A742AFAD24BD0213003B229D /* MotherView.swift in Sources */,
-				1352431024D33CBD00874505 /* ContentView.swift in Sources */,
 				A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */,
 				A7E445B824D22AC800375249 /* AppDelegate.swift in Sources */,
 				A74F441F24CB530A00C75699 /* test.swift in Sources */,

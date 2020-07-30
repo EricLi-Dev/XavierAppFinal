@@ -51,22 +51,6 @@ struct CarouselView: View {
                              isOpen: self.menuOpen,
                              menuClose: self.openMenu)
                 }
-                ZStack {
-                    if !self.menuOpen {
-                        Button(action: {
-                            self.openMenu()
-                        }) {
-                            Image(systemName: "exclamationmark.triangle.fill")
-                                .font(.system(size: 35.0))
-                                .frame(minWidth: 0, maxWidth: 25, minHeight: 0, maxHeight: 25)
-                            foregroundColor(Color(red: 250 / 255, green: 244 / 255, blue: 140 / 255))
-                        }
-                    }
-
-                    menuView(width: 300,
-                             isOpen: self.menuOpen,
-                             menuClose: self.openMenu)
-                }
 //                    ZStack {
 //                        if !self.menuOpen {
 //                            Button(action: {}) {

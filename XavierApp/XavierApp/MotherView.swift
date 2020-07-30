@@ -17,12 +17,11 @@ struct MotherView: View {
             if viewRouter.currentPage == "onboardingView" {
                 OnboardingView()
             } else if viewRouter.currentPage == "mainView" {
-//                if userSettings.isParent == true {
-//                    parentView()
-//                } else {
-//                    studentView()
-//                }
-                ContentView()
+                if userSettings.isParent == true {
+                    parentView()
+                } else {
+                    studentView()
+                }
             }
         }
     }
