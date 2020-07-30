@@ -624,7 +624,7 @@ struct PageThree: View {
                             
                             ZStack{
                                 //Next Button
-                                NavigationLink(destination: studentView().navigationBarBackButtonHidden(true)){
+                                NavigationLink(destination: MotherView().navigationBarBackButtonHidden(true)){
                                     Text("Next")
                                     Image(systemName: "chevron.right")
                                 }

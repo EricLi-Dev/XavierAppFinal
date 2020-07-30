@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1372591924A3F60000364C14 /* XavierAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372591824A3F60000364C14 /* XavierAppApp.swift */; };
 		1372591B24A3F60000364C14 /* studentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372591A24A3F60000364C14 /* studentView.swift */; };
 		1372591D24A3F60100364C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591C24A3F60100364C14 /* Assets.xcassets */; };
 		1372592024A3F60100364C14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591F24A3F60100364C14 /* Preview Assets.xcassets */; };
@@ -24,8 +25,6 @@
 		A7687FCA24ABB1E4006E1D2D /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7687FC924ABB1E4006E1D2D /* cardView.swift */; };
 		A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78BF1E224A404810008C7FC /* OnboardingView.swift */; };
 		A7E445B624CCCF5C00375249 /* scheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E445B524CCCF5C00375249 /* scheduleData.swift */; };
-		A7E445B824D22AC800375249 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E445B724D22AC800375249 /* AppDelegate.swift */; };
-		A7FBF6CD24D23203007C29BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBF6CC24D23203007C29BA /* SceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		1372591524A3F60000364C14 /* XavierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XavierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1372591824A3F60000364C14 /* XavierAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppApp.swift; sourceTree = "<group>"; };
 		1372591A24A3F60000364C14 /* studentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentView.swift; sourceTree = "<group>"; };
 		1372591C24A3F60100364C14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1372591F24A3F60100364C14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -69,8 +69,6 @@
 		A7687FC924ABB1E4006E1D2D /* cardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
 		A78BF1E224A404810008C7FC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A7E445B524CCCF5C00375249 /* scheduleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scheduleData.swift; sourceTree = "<group>"; };
-		A7E445B724D22AC800375249 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A7FBF6CC24D23203007C29BA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +119,7 @@
 		1372591724A3F60000364C14 /* XavierApp */ = {
 			isa = PBXGroup;
 			children = (
-				A7E445B724D22AC800375249 /* AppDelegate.swift */,
-				A7FBF6CC24D23203007C29BA /* SceneDelegate.swift */,
+				1372591824A3F60000364C14 /* XavierAppApp.swift */,
 				A742AFAC24BD0213003B229D /* MotherView.swift */,
 				A742AFAA24BD015A003B229D /* ViewRouter.swift */,
 				A78BF1E224A404810008C7FC /* OnboardingView.swift */,
@@ -301,12 +298,11 @@
 				A74445AC24AE7871004ECE1B /* CarouselView.swift in Sources */,
 				A742AFAD24BD0213003B229D /* MotherView.swift in Sources */,
 				A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */,
-				A7E445B824D22AC800375249 /* AppDelegate.swift in Sources */,
 				A74F441F24CB530A00C75699 /* test.swift in Sources */,
-				A7FBF6CD24D23203007C29BA /* SceneDelegate.swift in Sources */,
 				1372591B24A3F60000364C14 /* studentView.swift in Sources */,
 				A70478A024B6ACE7002D463D /* UserSettings.swift in Sources */,
 				A742AFAF24BD0AD4003B229D /* parentView.swift in Sources */,
+				1372591924A3F60000364C14 /* XavierAppApp.swift in Sources */,
 				137C381A24A5B7DB002F6D19 /* backgroundView.swift in Sources */,
 				A742AFAB24BD015A003B229D /* ViewRouter.swift in Sources */,
 				13EF942624CA438E006F898B /* WebView.swift in Sources */,
@@ -469,18 +465,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = XavierApp/XavierApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"XavierApp/Preview Content\"";
 				DEVELOPMENT_TEAM = SVAHMLZR95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = XavierApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp1;
+				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
@@ -493,18 +489,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = XavierApp/XavierApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"XavierApp/Preview Content\"";
 				DEVELOPMENT_TEAM = SVAHMLZR95;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = XavierApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp1;
+				PRODUCT_BUNDLE_IDENTIFIER = cornette.XavierApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;

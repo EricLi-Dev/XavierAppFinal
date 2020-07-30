@@ -12,10 +12,7 @@ struct pageFourTest: View{
     @ObservedObject var sched = schedData()
     @State private var textLetterDay = 0
     @State private var showSheet = false
-    @State var subjectName = ""
-    @State var subjectTeacher = ""
-    @State var subjectTime = ""
-    @State private var selected: Int = 0
+    @State private var selectedPeriod: Int = 5
     
     var body: some View{
         ZStack{
@@ -92,13 +89,13 @@ struct pageFourTest: View{
                         List{
                             
                             if (textLetterDay < 6){
-                                        ForEach(1 ..< 7){ i in
+                                        ForEach(1 ..< 9){ i in
                                             Button(action: {
                                                 
-                                                self.selected = i
+                                                self.selectedPeriod = i
                                                 self.showSheet = true
-                                               
-                                                print(sched.Data)
+                                                
+
                                             }){
                                             HStack{
                                                 Spacer()
@@ -109,7 +106,7 @@ struct pageFourTest: View{
                                                         
                                                         Text(sched.Data[textLetterDay][i])
                                                         
-                                                        Text(sched.Teacher[i])
+                                                        Text("Mr. Johnson")
                                                         
                                                     }
                                                     .fixedSize()
@@ -118,7 +115,7 @@ struct pageFourTest: View{
                                                         .frame(width: g.size.width/6)
                                                 
                                                     HStack{
-                                                        Text(sched.TimeNormal[i])
+                                                        Text("8:10 - 9:20")
                                                     }
                                                     .fixedSize()
                                                     .frame(width: g.size.width/5)
@@ -138,7 +135,63 @@ struct pageFourTest: View{
                                 Text(sched.Data[textLetterDay][2])
                                 Text(sched.Data[textLetterDay][3])
                                 Text(sched.Data[textLetterDay][4])
+                                Text(sched.Data[textLetterDay][5])
                             }
+                            
+                          
+                           
+                              
+                                    
+                            
+                            
+//                                    if (period.letterDay == textLetterDay){
+//
+//                                        Button(action: {
+//
+//                                            self.showSheet = true
+//                                            self.selectedPeriod = period
+//
+//                                        }){
+//                                            HStack{
+//                                                Spacer()
+//                                                    .frame(width: g.size.width/5.5, height: g.size.height/15)
+//
+//
+//
+//                                                    HStack{
+//
+//
+//                                                        VStack(alignment: .leading){
+//
+//                                                            Text(period.periodName)
+//
+//                                                            Text("Mr. Johnson")
+//                                                        }
+//                                                        .fixedSize()
+//                                                        .frame(width: g.size.width/5)
+//
+//                                                        Spacer()
+//                                                            .frame(width: g.size.width/6)
+//
+//                                                        HStack{
+//                                                            Text(period.timeRange)
+//                                                        }
+//                                                        .fixedSize()
+//                                                        .frame(width: g.size.width/5)
+//                                                    }
+//                                                    .background(RoundedRectangle(cornerRadius: 4)
+//                                                                    .fill(Color("Blue"))
+//                                                                    .frame(width: g.size.width/1.2)
+//                                                                    .frame(height: g.size.height/15)
+//                                                                    .edgesIgnoringSafeArea(.horizontal))
+//                                                }
+//                                        }
+//
+//
+//
+//
+//
+                                    
                                 
                                 
                                 
@@ -146,32 +199,7 @@ struct pageFourTest: View{
                             
                     }
                     .sheet(isPresented: $showSheet){
-                        VStack{
-                        
-                            Button(action: {
-                                sched.update(lDay: textLetterDay, pNum: selected, name: subjectName, teacher: subjectTeacher, time: subjectTime)
-                                print(sched.Data)
-                            }) {
-                                Text("Save")
-                            }
-                            
-                            List{
-                                HStack{
-                                    Text("Subject: ")
-                                    TextField(sched.Data[textLetterDay][selected], text: $subjectName)
-                                }
-                                HStack{
-                                    Text("Teacher: ")
-                                    TextField(sched.Teacher[selected], text: $subjectTeacher)
-                                }
-                                HStack{
-                                    Text("Time: ")
-                                    TextField(sched.TimeNormal[selected], text: $subjectTime)
-                                }
-                                
-                            }
-                        }
-                        
+                        customActionMenu(letterDay: textLetterDay, periodNumber: selectedPeriod)
                     }
                     
                   
@@ -187,6 +215,42 @@ struct pageFourTest: View{
     }
 }
 
+//Menu to edit the Schedule text
+struct customActionMenu: View{
+    @ObservedObject var sched = schedData()
+    @State var letterDay: Int
+    @State var periodNumber: Int
+    @State var subjectName = ""
+    
+    var body: some View{
+        VStack{
+        
+            Button(action: {
+                sched.Data[letterDay][periodNumber] = self.subjectName
+            }) {
+                Text("Save")
+            }
+            
+            List{
+                HStack{
+                    Text("Subject: ")
+                    TextField(sched.Data[letterDay][periodNumber], text: $subjectName)
+                }
+                HStack{
+                    Text("Teacher: ")
+                    TextField(sched.Data[letterDay][periodNumber], text: $subjectName)
+                }
+                HStack{
+                    Text("Time: ")
+                    TextField(sched.Data[letterDay][periodNumber], text: $subjectName)
+                }
+                
+            }
+        }
+    }
+    
+
+}
 
 struct pageFourPreviews: PreviewProvider {
     static var previews: some View {
