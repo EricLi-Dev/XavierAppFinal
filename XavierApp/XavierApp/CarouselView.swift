@@ -28,6 +28,7 @@ struct CarouselView: View {
     }
 
     @State var menuOpen: Bool = false
+    @State var warningOpen: Bool = false
     var body: some View {
 
         // This vstack conttains buttons within an hstack,
@@ -47,9 +48,25 @@ struct CarouselView: View {
                         }
                     }
 
-                    menuView(width: 300,
+                    menuView(width: 200,
                              isOpen: self.menuOpen,
                              menuClose: self.openMenu)
+                }
+                ZStack {
+                    if !self.warningOpen {
+                        Button(action: {
+                            self.openWarning()
+                        }) {
+                            Image(systemName: "exclamationmark.triangle.fill")
+                                .font(.system(size: 35.0))
+                                .frame(minWidth: 0, maxWidth: 25, minHeight: 0, maxHeight: 25)
+                                .foregroundColor(Color(red: 250 / 255, green: 244 / 255, blue: 140 / 255))
+                        }
+                    }
+
+                    warningView(width: 200,
+                             isOpen: self.warningOpen,
+                             menuClose: self.openWarning)
                 }
 //                    ZStack {
 //                        if !self.menuOpen {
@@ -219,6 +236,9 @@ struct CarouselView: View {
 
     func openMenu() {
         menuOpen.toggle()
+    }
+    func openWarning() {
+        warningOpen.toggle()
     }
 
     // Text Functions
