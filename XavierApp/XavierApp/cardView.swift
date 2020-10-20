@@ -1,5 +1,6 @@
 import SwiftUI
-
+import WebKit
+import SwiftSoup
 //Information for Schedule Card
 struct Period: Identifiable {
     var id: Int
@@ -183,18 +184,24 @@ struct ScheduleCard: View{
 }
 
 struct CalendarCard: View{
+    let webScraper = webScrape(source: "http://www.xavierhs.org/s/81/rd16/start.aspx")
+    func getEvent() -> String{
+        webScraper.parseAndExecute()
+        return webScraper.getOne()
+    }
     
-    let events: [Events] = [
-        .init(id: 0, eventName: "CFX Equador", date: "June 24th 2020", details: "filler text"),
-        .init(id: 1, eventName: "CFX Equador", date: "June 24th 2020", details: "filler text"),
-        .init(id: 2, eventName: "CFX Equador", date: "June 24th 2020", details: "filler text"),
-        .init(id: 3, eventName: "CFX Equador", date: "June 24th 2020", details: "filler text"),
-        .init(id: 4, eventName: "CFX Equador", date: "June 24th 2020", details: "filler text"),
-        .init(id: 0, eventName: "CFX Equador", date: "June 24th 2020", details: "filler text")
     
-    ]
     
     var body: some View{
+        let events: [Events] = [
+            .init(id: 0, eventName: getEvent(), date: "June 24th 2020", details: "filler text"),
+            .init(id: 1, eventName: getEvent(), date: "June 24th 2020", details: "filler text"),
+            .init(id: 2, eventName: getEvent(), date: "June 24th 2020", details: "filler text"),
+            .init(id: 3, eventName: getEvent(), date: "June 24th 2020", details: "filler text"),
+            .init(id: 4, eventName: getEvent(), date: "June 24th 2020", details: "filler text"),
+            
+        
+        ]
         NavigationView{
         GeometryReader{ g in
             VStack{
@@ -267,7 +274,7 @@ struct CalendarCard: View{
                 
             }
         }
-        .navigationBarHidden(true)
+        
     }
 }
 }

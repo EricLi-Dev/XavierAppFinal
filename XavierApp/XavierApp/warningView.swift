@@ -6,36 +6,18 @@
 //
 
 import SwiftUI
-struct warningContent: View {
-    var body: some View {
-        Circle()
-            .fill(Color.white)
-    }
-}
+import ExytePopupView
+
 
 struct warningView: View {
     let width: CGFloat
-    let isOpen: Bool
-    @State var scale: CGFloat = 0
+    @State var isOpen: Bool
     let menuClose: () -> Void
     var body: some View {
-        ZStack {
-            warningContent()
-                .frame(width: self.width)
-                .scaleEffect(self.isOpen ? 10.0 : 0.0)
-                .animation(Animation.easeOut(duration: 0.8))
-                .zIndex(4)
-                
-
-            Circle()
-                .fill(Color(red: 132 / 255, green: 49 / 255, blue: 80 / 255))
-                .scaleEffect(self.isOpen ? 0.125 : 0.0)
-                .animation(Animation.easeOut(duration: 0.8))
-                .zIndex(5)
-                .onTapGesture {
-                    self.menuClose()
-                }
+        ZStack{
+            
         }
+        
     }
 }
 

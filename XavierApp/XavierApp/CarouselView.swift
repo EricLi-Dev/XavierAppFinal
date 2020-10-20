@@ -7,6 +7,8 @@
 //
 
 import SwiftUI
+import WebKit
+import SwiftSoup
 
 struct CarouselView: View {
     @ObservedObject var userSettings = UserSettings()
@@ -27,59 +29,15 @@ struct CarouselView: View {
         }
     }
 
-    @State var menuOpen: Bool = false
-    @State var warningOpen: Bool = false
+   
     var body: some View {
 
         // This vstack conttains buttons within an hstack,
 
         VStack {
             // Below is HStack with tthe menu and warning buttons.
-            HStack {
-                ZStack {
-                    if !self.menuOpen {
-                        Button(action: {
-                            self.openMenu()
-                        }) {
-                            Image(systemName: "smallcircle.fill.circle.fill")
-                                .font(.system(size: 35.0))
-                                .frame(minWidth: 0, maxWidth: 25, minHeight: 0, maxHeight: 25)
-                                .foregroundColor(.white)
-                        }
-                    }
 
-                    menuView(width: 200,
-                             isOpen: self.menuOpen,
-                             menuClose: self.openMenu)
-                }
-                ZStack {
-                    if !self.warningOpen {
-                        Button(action: {
-                            self.openWarning()
-                        }) {
-                            Image(systemName: "exclamationmark.triangle.fill")
-                                .font(.system(size: 35.0))
-                                .frame(minWidth: 0, maxWidth: 25, minHeight: 0, maxHeight: 25)
-                                .foregroundColor(Color(red: 250 / 255, green: 244 / 255, blue: 140 / 255))
-                        }
-                    }
-
-                    warningView(width: 200,
-                             isOpen: self.warningOpen,
-                             menuClose: self.openWarning)
-                }
-//                    ZStack {
-//                        if !self.menuOpen {
-//                            Button(action: {}) {
-//                                Image(systemName: "exclamationmark.triangle.fill")
-//                                    .font(.system(size: 35.0))
-//                                    .frame(minWidth: 0, maxWidth: 25, minHeight: 0, maxHeight: 25)
-//                                    .foregroundColor(Color(red: 250 / 255, green: 244 / 255, blue: 140 / 255))
-//                                    .animation(.interpolatingSpring(mass: 1, stiffness: 4, damping: 3, initialVelocity: 2))
-//                            }
-//                        }
-//                    }
-            }
+            
 
                 ZStack{
                 //Text
@@ -94,8 +52,7 @@ struct CarouselView: View {
                                 Text(getDate())
                                     .font(.largeTitle)
                                     .foregroundColor(.white)
-                                    .padding(.trailing, 90)
-
+                                    
                                 
                                     
                             }
@@ -108,7 +65,7 @@ struct CarouselView: View {
                                 Text(welcomeText())
                                     .font(.largeTitle)
                                     .foregroundColor(.white)
-                                    .padding(.trailing, 90)
+                                   
                                     
 //                                }
                                     
@@ -123,27 +80,23 @@ struct CarouselView: View {
                                 Text(getLetterDay())
                                     .font(.largeTitle)
                                     .foregroundColor(.white)
-                                    .padding(.trailing, 15)
+                                    
 
                                 
                                     
                             }
                         }
 
-                        .frame(height: gr.size.height * 1.2)
+                        .frame(height: gr.size.height/2)
                     }
                     // .background(Color.red)
 
-                        .frame(width: gr.size.width, height: gr.size.height*1.2)
+                        .frame(width: gr.size.width, height: gr.size.height/2)
 
                 }
             }
 
-            VStack {
-                Text("")
-                    .padding(.bottom)
-                Spacer()
-            }
+            
 
             // MARK: HERE
 
@@ -152,7 +105,7 @@ struct CarouselView: View {
                     ForEach(0 ..< views.count) { i in
                         GeometryReader { gr in
                             VStack {
-                                Spacer()
+                            
                                 self.views[i]
                                     // Text("\(i)")
 
@@ -166,7 +119,7 @@ struct CarouselView: View {
                                     .animation(.interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
                                     .offset(x: self.getOffset(i))
                                     .animation(.interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
-                                Spacer()
+                               
                             }.frame(width: gr.size.width, height: gr.size.height)
                         }
                     }
@@ -179,16 +132,14 @@ struct CarouselView: View {
                         .onEnded(onDragEnded)
                 )
 
-                Spacer()
+              
             }.zIndex(-100)
 
             // PageIndicators
             GeometryReader { geo in
                 VStack {
-                    Spacer()
-                    Text("")
-                        .padding(10)
-                    Spacer()
+                    
+                   
 
                     HStack(alignment: .center) {
                         // 1st Circle
@@ -234,12 +185,7 @@ struct CarouselView: View {
         
     }
 
-    func openMenu() {
-        menuOpen.toggle()
-    }
-    func openWarning() {
-        warningOpen.toggle()
-    }
+    
 
     // Text Functions
     func getDate() -> String {
@@ -287,8 +233,9 @@ struct CarouselView: View {
 
     func getLetterDay() -> String {
         // Webscraping by TJ
-        return "  G\nDay"
-
+        let webScraper2 = webScrape(source: "http://www.xavierhs.org/s/81/rd16/index.aspx?sid=81&gid=1&pgid=1511")
+       return webScraper2.parseAndExecuteDay()
+        
     }
 
     func welcomeText() -> String {

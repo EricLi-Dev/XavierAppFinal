@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,9 @@
 		13DC045C24D3B5BC00F145A2 /* warningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC045B24D3B5BC00F145A2 /* warningView.swift */; };
 		13EF942324C941A1006F898B /* menuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EF942224C941A1006F898B /* menuView.swift */; };
 		13EF942624CA438E006F898B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EF942524CA438E006F898B /* WebView.swift */; };
+		13FEF10224E3217800633410 /* webScrape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13FEF10124E3217800633410 /* webScrape.swift */; };
+		7CF10D08BC3149151F18972C /* Pods_XavierApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C078E7461DD76B67D2F571F7 /* Pods_XavierApp.framework */; };
+		8E2DE14B1E2300131FDEDAC0 /* Pods_XavierApp_XavierAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55779D2ED9679E39FDC4F114 /* Pods_XavierApp_XavierAppUITests.framework */; };
 		A70478A024B6ACE7002D463D /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704789F24B6ACE7002D463D /* UserSettings.swift */; };
 		A742AFAB24BD015A003B229D /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAA24BD015A003B229D /* ViewRouter.swift */; };
 		A742AFAD24BD0213003B229D /* MotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A742AFAC24BD0213003B229D /* MotherView.swift */; };
@@ -26,6 +29,7 @@
 		A74445AC24AE7871004ECE1B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74445AB24AE7871004ECE1B /* CarouselView.swift */; };
 		A7687FCA24ABB1E4006E1D2D /* cardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7687FC924ABB1E4006E1D2D /* cardView.swift */; };
 		A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78BF1E224A404810008C7FC /* OnboardingView.swift */; };
+		B114B6943DB59B67984370A1 /* Pods_XavierAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 136EBC2D37EFDBE77C420E21 /* Pods_XavierAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		136EBC2D37EFDBE77C420E21 /* Pods_XavierAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XavierAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1372591524A3F60000364C14 /* XavierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XavierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1372591824A3F60000364C14 /* XavierAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppApp.swift; sourceTree = "<group>"; };
 		1372591A24A3F60000364C14 /* studentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentView.swift; sourceTree = "<group>"; };
@@ -64,6 +69,9 @@
 		13DC045B24D3B5BC00F145A2 /* warningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = warningView.swift; sourceTree = "<group>"; };
 		13EF942224C941A1006F898B /* menuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuView.swift; sourceTree = "<group>"; };
 		13EF942524CA438E006F898B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		13FEF10124E3217800633410 /* webScrape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = webScrape.swift; sourceTree = "<group>"; };
+		55779D2ED9679E39FDC4F114 /* Pods_XavierApp_XavierAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XavierApp_XavierAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB092D87B0898790BD89539 /* Pods-XavierAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XavierAppTests.debug.xcconfig"; path = "Target Support Files/Pods-XavierAppTests/Pods-XavierAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A704789F24B6ACE7002D463D /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		A742AFAA24BD015A003B229D /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		A742AFAC24BD0213003B229D /* MotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotherView.swift; sourceTree = "<group>"; };
@@ -71,6 +79,12 @@
 		A74445AB24AE7871004ECE1B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		A7687FC924ABB1E4006E1D2D /* cardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardView.swift; sourceTree = "<group>"; };
 		A78BF1E224A404810008C7FC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		C078E7461DD76B67D2F571F7 /* Pods_XavierApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XavierApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0C65DC6940EAC399BCE76A7 /* Pods-XavierAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XavierAppTests.release.xcconfig"; path = "Target Support Files/Pods-XavierAppTests/Pods-XavierAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C48881EA64767796B1699906 /* Pods-XavierApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XavierApp.debug.xcconfig"; path = "Target Support Files/Pods-XavierApp/Pods-XavierApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D398E7FAA6D866F01C99F142 /* Pods-XavierApp-XavierAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XavierApp-XavierAppUITests.release.xcconfig"; path = "Target Support Files/Pods-XavierApp-XavierAppUITests/Pods-XavierApp-XavierAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D4230AA9CC959E9B171D12DD /* Pods-XavierApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XavierApp.release.xcconfig"; path = "Target Support Files/Pods-XavierApp/Pods-XavierApp.release.xcconfig"; sourceTree = "<group>"; };
+		DA420B4D49EC8A0A52759E58 /* Pods-XavierApp-XavierAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XavierApp-XavierAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-XavierApp-XavierAppUITests/Pods-XavierApp-XavierAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CF10D08BC3149151F18972C /* Pods_XavierApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B114B6943DB59B67984370A1 /* Pods_XavierAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2DE14B1E2300131FDEDAC0 /* Pods_XavierApp_XavierAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +122,8 @@
 				1372592924A3F60100364C14 /* XavierAppTests */,
 				1372593424A3F60100364C14 /* XavierAppUITests */,
 				1372591624A3F60000364C14 /* Products */,
+				8C4661041820D6A7F6220F36 /* Pods */,
+				991D566E5E1267962E6505D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +152,7 @@
 				1372591A24A3F60000364C14 /* studentView.swift */,
 				13EF942524CA438E006F898B /* WebView.swift */,
 				A742AFAE24BD0AD4003B229D /* parentView.swift */,
+				13FEF10124E3217800633410 /* webScrape.swift */,
 				A7687FC924ABB1E4006E1D2D /* cardView.swift */,
 				137C381924A5B7DB002F6D19 /* backgroundView.swift */,
 				13EF942224C941A1006F898B /* menuView.swift */,
@@ -169,6 +189,29 @@
 			path = XavierAppUITests;
 			sourceTree = "<group>";
 		};
+		8C4661041820D6A7F6220F36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C48881EA64767796B1699906 /* Pods-XavierApp.debug.xcconfig */,
+				D4230AA9CC959E9B171D12DD /* Pods-XavierApp.release.xcconfig */,
+				DA420B4D49EC8A0A52759E58 /* Pods-XavierApp-XavierAppUITests.debug.xcconfig */,
+				D398E7FAA6D866F01C99F142 /* Pods-XavierApp-XavierAppUITests.release.xcconfig */,
+				8BB092D87B0898790BD89539 /* Pods-XavierAppTests.debug.xcconfig */,
+				C0C65DC6940EAC399BCE76A7 /* Pods-XavierAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		991D566E5E1267962E6505D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C078E7461DD76B67D2F571F7 /* Pods_XavierApp.framework */,
+				55779D2ED9679E39FDC4F114 /* Pods_XavierApp_XavierAppUITests.framework */,
+				136EBC2D37EFDBE77C420E21 /* Pods_XavierAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +219,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1372593A24A3F60100364C14 /* Build configuration list for PBXNativeTarget "XavierApp" */;
 			buildPhases = (
+				C871719ACF5740466A24BFB5 /* [CP] Check Pods Manifest.lock */,
 				1372591124A3F60000364C14 /* Sources */,
 				1372591224A3F60000364C14 /* Frameworks */,
 				1372591324A3F60000364C14 /* Resources */,
+				A786406401215FCE41F8CF29 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +238,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1372593D24A3F60100364C14 /* Build configuration list for PBXNativeTarget "XavierAppTests" */;
 			buildPhases = (
+				CDC80F6F6FCAFA00D7F6C812 /* [CP] Check Pods Manifest.lock */,
 				1372592224A3F60100364C14 /* Sources */,
 				1372592324A3F60100364C14 /* Frameworks */,
 				1372592424A3F60100364C14 /* Resources */,
@@ -211,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1372594024A3F60100364C14 /* Build configuration list for PBXNativeTarget "XavierAppUITests" */;
 			buildPhases = (
+				1579D9DC8923167DF79F3BC8 /* [CP] Check Pods Manifest.lock */,
 				1372592D24A3F60100364C14 /* Sources */,
 				1372592E24A3F60100364C14 /* Frameworks */,
 				1372592F24A3F60100364C14 /* Resources */,
+				666BFA2B88109CA8D481416F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -293,6 +341,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1579D9DC8923167DF79F3BC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XavierApp-XavierAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		666BFA2B88109CA8D481416F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XavierApp-XavierAppUITests/Pods-XavierApp-XavierAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XavierApp-XavierAppUITests/Pods-XavierApp-XavierAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XavierApp-XavierAppUITests/Pods-XavierApp-XavierAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A786406401215FCE41F8CF29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XavierApp/Pods-XavierApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XavierApp/Pods-XavierApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XavierApp/Pods-XavierApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C871719ACF5740466A24BFB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XavierApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDC80F6F6FCAFA00D7F6C812 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-XavierAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1372591124A3F60000364C14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -304,6 +455,7 @@
 				13A8B8FC24D3970C00AA7E09 /* test.swift in Sources */,
 				1372591B24A3F60000364C14 /* studentView.swift in Sources */,
 				13DC045C24D3B5BC00F145A2 /* warningView.swift in Sources */,
+				13FEF10224E3217800633410 /* webScrape.swift in Sources */,
 				A70478A024B6ACE7002D463D /* UserSettings.swift in Sources */,
 				A742AFAF24BD0AD4003B229D /* parentView.swift in Sources */,
 				13A8B90024D3971700AA7E09 /* scheduleData.swift in Sources */,
@@ -466,6 +618,7 @@
 		};
 		1372593B24A3F60100364C14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C48881EA64767796B1699906 /* Pods-XavierApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -490,6 +643,7 @@
 		};
 		1372593C24A3F60100364C14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4230AA9CC959E9B171D12DD /* Pods-XavierApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -514,6 +668,7 @@
 		};
 		1372593E24A3F60100364C14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BB092D87B0898790BD89539 /* Pods-XavierAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +691,7 @@
 		};
 		1372593F24A3F60100364C14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0C65DC6940EAC399BCE76A7 /* Pods-XavierAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -558,6 +714,7 @@
 		};
 		1372594124A3F60100364C14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA420B4D49EC8A0A52759E58 /* Pods-XavierApp-XavierAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -578,6 +735,7 @@
 		};
 		1372594224A3F60100364C14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D398E7FAA6D866F01C99F142 /* Pods-XavierApp-XavierAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

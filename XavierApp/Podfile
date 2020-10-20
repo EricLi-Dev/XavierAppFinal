@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '13.0'
+
+target 'XavierApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for XavierApp
+    pod 'ExytePopupView'
+    pod 'SwiftSoup'
+    pod 'FeedKit'
+
+  target 'XavierAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'XavierAppUITests' do
+    # Pods for testing
+  end
+
+end

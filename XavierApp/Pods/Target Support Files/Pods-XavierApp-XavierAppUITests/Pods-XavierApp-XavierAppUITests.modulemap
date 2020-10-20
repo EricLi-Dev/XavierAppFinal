@@ -1,0 +1,6 @@
+framework module Pods_XavierApp_XavierAppUITests {
+  umbrella header "Pods-XavierApp-XavierAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
