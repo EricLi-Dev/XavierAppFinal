@@ -24,3 +24,5 @@ Version 1 is almost done.
  - [ ] Connect Parsing to UI? (in-progress)
  - [ ] Have google classroom sign in move to next view automatically (should be very easy)
  - [ ] stop writing this and code
+
+![Alt Text](https://media.giphy.com/media/wJ8iZ0EogyzjrPWuGU/giphy.gif)
