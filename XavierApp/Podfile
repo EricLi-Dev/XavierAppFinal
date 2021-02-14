@@ -9,6 +9,10 @@ target 'XavierApp' do
     pod 'ExytePopupView'
     pod 'SwiftSoup'
     pod 'FeedKit'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Auth'
+    pod 'GoogleSignIn'
+    pod 'GoogleAPIClientForREST/Classroom'
 
   target 'XavierAppTests' do
     inherit! :search_paths

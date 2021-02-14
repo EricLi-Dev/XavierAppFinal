@@ -32,13 +32,32 @@ extension View {
         )
     }
 
-    func applyIf<T: View>(_ condition: @autoclosure () -> Bool, apply: (Self) -> T) -> AnyView {
-        if condition() {
-            return AnyView(apply(self))
+    @ViewBuilder
+    func applyIf<T: View>(_ condition: Bool, apply: (Self) -> T) -> some View {
+        if condition {
+            apply(self)
         } else {
-            return AnyView(self)
+            self
         }
     }
+
+    @ViewBuilder
+    func addTapIfNotTV(if condition: Bool, onTap: @escaping ()->()) -> some View {
+        #if os(tvOS)
+        self
+        #else
+        if condition {
+            self.simultaneousGesture(
+                TapGesture().onEnded {
+                    onTap()
+                }
+            )
+        } else {
+            self
+        }
+        #endif
+    }
+
 }
 
 public struct Popup<PopupContent>: ViewModifier where PopupContent: View {
@@ -137,19 +156,27 @@ public struct Popup<PopupContent>: ViewModifier where PopupContent: View {
         return isPresented ? displayedOffset : hiddenOffset
     }
 
+    private var screenSize: CGSize {
+        #if os(iOS) || os(tvOS)
+        return UIScreen.main.bounds.size
+        #elseif os(watchOS)
+        return WKInterfaceDevice.current().screenBounds.size
+        #else
+        return NSScreen.main?.frame.size ?? .zero
+        #endif
+    }
+
     private var screenHeight: CGFloat {
-        UIScreen.main.bounds.height
+        screenSize.height
     }
 
     // MARK: - Content Builders
 
     public func body(content: Content) -> some View {
         content
-            .applyIf(closeOnTapOutside) {
-                $0.simultaneousGesture(
-                    TapGesture().onEnded {
-                        self.isPresented = false
-                    })
+            .addTapIfNotTV(if: closeOnTapOutside) {
+                self.dispatchWorkHolder.work?.cancel()
+                self.isPresented = false
             }
             .background(
                 GeometryReader { proxy -> AnyView in
@@ -184,11 +211,10 @@ public struct Popup<PopupContent>: ViewModifier where PopupContent: View {
                 VStack {
                     VStack {
                         self.view()
-                            .simultaneousGesture(TapGesture().onEnded {
-                                if self.closeOnTap {
-                                    self.isPresented = false
-                                }
-                            })
+                            .addTapIfNotTV(if: closeOnTap) {
+                                self.dispatchWorkHolder.work?.cancel()
+                                self.isPresented = false
+                            }
                             .background(
                                 GeometryReader { proxy -> AnyView in
                                     let rect = proxy.frame(in: .global)
@@ -203,7 +229,7 @@ public struct Popup<PopupContent>: ViewModifier where PopupContent: View {
                             )
                     }
                 }
-                .frame(width: UIScreen.main.bounds.width)
+                .frame(width: screenSize.width)
                 .offset(x: 0, y: currentOffset)
                 .animation(animation)
             }

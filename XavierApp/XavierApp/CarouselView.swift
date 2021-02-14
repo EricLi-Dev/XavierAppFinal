@@ -29,7 +29,6 @@ struct CarouselView: View {
         }
     }
 
-   
     var body: some View {
 
         // This vstack conttains buttons within an hstack,
@@ -37,53 +36,55 @@ struct CarouselView: View {
         VStack {
             // Below is HStack with tthe menu and warning buttons.
 
-            
-
-                ZStack{
+                ZStack {
                 //Text
-                GeometryReader{ gr in
-                    ZStack{
-                        HStack(){
-                            
+                GeometryReader { gr in
+                    ZStack {
+                        HStack {
+
                             //Calendar Card
-                            if ((relativeLoc() + 1) % 3 == 0){
-                               
-                                
+                            if (relativeLoc() + 1) % 3 == 0 {
+
+                                VStack(alignment: .leading){
+
                                 Text(getDate())
-                                    .font(.largeTitle)
+                                    .font(.system(size: 35, weight: .medium))
                                     .foregroundColor(.white)
                                     
-                                
-                                    
+
+                                }.offset(x: -gr.size.width/15 ,y:0)
+
                             }
-                            
+
                             //Lunch Card
-                            if ((relativeLoc() + 1) % 3 == 1){
-//                                VStack(alignment: .leading){
-                               
-                                
+                            if (relativeLoc() + 1) % 3 == 1 {
+                                VStack(alignment: .leading){
+
                                 Text(welcomeText())
-                                    .font(.largeTitle)
+                                    .font(.system(size: 35, weight: .medium))
                                     .foregroundColor(.white)
-                                   
                                     
-//                                }
-                                    
+
+                                }.offset(x: -gr.size.width/30 ,y:0)
+
                             }
-                            
+
                             //Schedule Card
-                            if ((relativeLoc() + 1) % 3 == 2){
-                                
+                            if (relativeLoc() + 1) % 3 == 2 {
+
 //                                Text("")
 //                                    .padding(180)
-                                
+
+                                VStack{
+
                                 Text(getLetterDay())
-                                    .font(.largeTitle)
+                                    .font(.system(size: 40, weight: .medium))
                                     .foregroundColor(.white)
+                                    .multilineTextAlignment(.center)
                                     
 
-                                
-                                    
+                                }
+
                             }
                         }
 
@@ -96,8 +97,6 @@ struct CarouselView: View {
                 }
             }
 
-            
-
             // MARK: HERE
 
             VStack {
@@ -105,7 +104,7 @@ struct CarouselView: View {
                     ForEach(0 ..< views.count) { i in
                         GeometryReader { gr in
                             VStack {
-                            
+
                                 self.views[i]
                                     // Text("\(i)")
 
@@ -119,7 +118,7 @@ struct CarouselView: View {
                                     .animation(.interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
                                     .offset(x: self.getOffset(i))
                                     .animation(.interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
-                               
+
                             }.frame(width: gr.size.width, height: gr.size.height)
                         }
                     }
@@ -132,14 +131,11 @@ struct CarouselView: View {
                         .onEnded(onDragEnded)
                 )
 
-              
             }.zIndex(-100)
 
             // PageIndicators
             GeometryReader { geo in
                 VStack {
-                    
-                   
 
                     HStack(alignment: .center) {
                         // 1st Circle
@@ -182,10 +178,8 @@ struct CarouselView: View {
                 }
             }.zIndex(-100)
         }
-        
-    }
 
-    
+    }
 
     // Text Functions
     func getDate() -> String {
@@ -196,6 +190,7 @@ struct CarouselView: View {
         // Month integer number
         let month = calendar.component(.month, from: date)
         // Day of the Month
+        
         let dayOfMonth = calendar.component(.day, from: date)
         // Weekday integer number
         let weekday = calendar.component(.weekday, from: date)
@@ -208,7 +203,7 @@ struct CarouselView: View {
 
         // Arrays of Months and Weekdays
         let monthsArray = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."]
-        let daysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        let daysArray = ["Sunday,", "Monday,", "Tuesday,", "Wednesday,", "Thursday,", "Friday,", "Saturday,"]
 
         // Month in string form
         monthWord = monthsArray[month - 1]
@@ -233,9 +228,13 @@ struct CarouselView: View {
 
     func getLetterDay() -> String {
         // Webscraping by TJ
-        let webScraper2 = webScrape(source: "http://www.xavierhs.org/s/81/rd16/index.aspx?sid=81&gid=1&pgid=1511")
-       return webScraper2.parseAndExecuteDay()
+        //F*** Xavier for removing the days from website. I guess it has to be done manually now until they can get their stuff together. Annoying. TODO: Database for live changes?
+        let daysOrder = ["H\nDay","I\nDay","J\nDay","G\nDay","No\nClasses","No\nClasses","No\nClasses", "H\nDay","I\nDay","J\nDay","G\nDay", "H\nDay","I\nDay","J\nDay","G\nDay","H\nDay","No\nClasses","No\nClasses","No\nClasses","No\nClasses","No\nClasses","No\nClasses","No\nClasses","No\nClasses","No\nClasses", "I\nDay","J\nDay","G\nDay", "H\nDay","I\nDay", "No\nClasses","No\nClasses"]
+        let date = Date()
+        let calendar = Calendar.current
+        let dayOfMonth = calendar.component(.day, from: date)
         
+        return daysOrder[dayOfMonth-1]
     }
 
     func welcomeText() -> String {
@@ -249,7 +248,7 @@ struct CarouselView: View {
         } else {
             greeting = "Good Evening,"
         }
-        return " \(greeting) \n \(name)"
+        return " \(greeting) \n \(name)."
     }
 
     func relativeLoc() -> Int {

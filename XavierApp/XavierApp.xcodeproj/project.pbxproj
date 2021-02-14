@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1372591924A3F60000364C14 /* XavierAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372591824A3F60000364C14 /* XavierAppApp.swift */; };
+		1301590125C205B500772C63 /* onboardOneBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1301590025C205B500772C63 /* onboardOneBack.swift */; };
+		1301590A25C206F900772C63 /* purpbleCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1301590925C206F900772C63 /* purpbleCircle.swift */; };
+		1301590F25C2099D00772C63 /* mainTextOnOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1301590E25C2099D00772C63 /* mainTextOnOne.swift */; };
+		1301591925C20FDE00772C63 /* logoOnOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1301591825C20FDE00772C63 /* logoOnOne.swift */; };
+		131BA70125C73E350074FB89 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131BA70025C73E350074FB89 /* SwiftUIView.swift */; };
+		133FAE7725D8FE57006ADE9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 133FAE7625D8FE57006ADE9B /* GoogleService-Info.plist */; };
+		133FAE7C25D8FFF5006ADE9B /* CloudFilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133FAE7B25D8FFF5006ADE9B /* CloudFilesManager.swift */; };
 		1372591B24A3F60000364C14 /* studentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372591A24A3F60000364C14 /* studentView.swift */; };
 		1372591D24A3F60100364C14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591C24A3F60100364C14 /* Assets.xcassets */; };
 		1372592024A3F60100364C14 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372591F24A3F60100364C14 /* Preview Assets.xcassets */; };
 		1372592B24A3F60100364C14 /* XavierAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372592A24A3F60100364C14 /* XavierAppTests.swift */; };
 		1372593624A3F60100364C14 /* XavierAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372593524A3F60100364C14 /* XavierAppUITests.swift */; };
 		137C381A24A5B7DB002F6D19 /* backgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137C381924A5B7DB002F6D19 /* backgroundView.swift */; };
+		138D6E6525C8786B00860575 /* XavierAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138D6E6425C8786B00860575 /* XavierAppApp.swift */; };
 		13A8B8FC24D3970C00AA7E09 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A8B8FB24D3970C00AA7E09 /* test.swift */; };
 		13A8B90024D3971700AA7E09 /* scheduleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A8B8FF24D3971700AA7E09 /* scheduleData.swift */; };
+		13CD9BDF25C776A300463326 /* testinBench.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CD9BDE25C776A300463326 /* testinBench.swift */; };
 		13DC045C24D3B5BC00F145A2 /* warningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DC045B24D3B5BC00F145A2 /* warningView.swift */; };
 		13EF942324C941A1006F898B /* menuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EF942224C941A1006F898B /* menuView.swift */; };
 		13EF942624CA438E006F898B /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13EF942524CA438E006F898B /* WebView.swift */; };
@@ -50,9 +58,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1301590025C205B500772C63 /* onboardOneBack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onboardOneBack.swift; sourceTree = "<group>"; };
+		1301590925C206F900772C63 /* purpbleCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = purpbleCircle.swift; sourceTree = "<group>"; };
+		1301590E25C2099D00772C63 /* mainTextOnOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTextOnOne.swift; sourceTree = "<group>"; };
+		1301591825C20FDE00772C63 /* logoOnOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logoOnOne.swift; sourceTree = "<group>"; };
+		131BA70025C73E350074FB89 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		133FAE7625D8FE57006ADE9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		133FAE7B25D8FFF5006ADE9B /* CloudFilesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudFilesManager.swift; path = XavierApp/CloudFilesManager.swift; sourceTree = SOURCE_ROOT; };
 		136EBC2D37EFDBE77C420E21 /* Pods_XavierAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XavierAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1372591524A3F60000364C14 /* XavierApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XavierApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1372591824A3F60000364C14 /* XavierAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppApp.swift; sourceTree = "<group>"; };
 		1372591A24A3F60000364C14 /* studentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = studentView.swift; sourceTree = "<group>"; };
 		1372591C24A3F60100364C14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1372591F24A3F60100364C14 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -64,8 +78,10 @@
 		1372593524A3F60100364C14 /* XavierAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XavierAppUITests.swift; sourceTree = "<group>"; };
 		1372593724A3F60100364C14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		137C381924A5B7DB002F6D19 /* backgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundView.swift; sourceTree = "<group>"; };
+		138D6E6425C8786B00860575 /* XavierAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XavierAppApp.swift; path = XavierApp/XavierAppApp.swift; sourceTree = SOURCE_ROOT; };
 		13A8B8FB24D3970C00AA7E09 /* test.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		13A8B8FF24D3971700AA7E09 /* scheduleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = scheduleData.swift; sourceTree = "<group>"; };
+		13CD9BDE25C776A300463326 /* testinBench.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testinBench.swift; sourceTree = "<group>"; };
 		13DC045B24D3B5BC00F145A2 /* warningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = warningView.swift; sourceTree = "<group>"; };
 		13EF942224C941A1006F898B /* menuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menuView.swift; sourceTree = "<group>"; };
 		13EF942524CA438E006F898B /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
@@ -115,6 +131,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1301590525C205C300772C63 /* onboardingPageOne */ = {
+			isa = PBXGroup;
+			children = (
+				1301590025C205B500772C63 /* onboardOneBack.swift */,
+				1301590925C206F900772C63 /* purpbleCircle.swift */,
+				1301591825C20FDE00772C63 /* logoOnOne.swift */,
+				1301590E25C2099D00772C63 /* mainTextOnOne.swift */,
+			);
+			path = onboardingPageOne;
+			sourceTree = "<group>";
+		};
 		1372590C24A3F60000364C14 = {
 			isa = PBXGroup;
 			children = (
@@ -141,16 +168,21 @@
 			isa = PBXGroup;
 			children = (
 				13A8B8FB24D3970C00AA7E09 /* test.swift */,
-				1372591824A3F60000364C14 /* XavierAppApp.swift */,
+				133FAE7625D8FE57006ADE9B /* GoogleService-Info.plist */,
 				A742AFAC24BD0213003B229D /* MotherView.swift */,
 				A742AFAA24BD015A003B229D /* ViewRouter.swift */,
 				A78BF1E224A404810008C7FC /* OnboardingView.swift */,
+				138D6E6425C8786B00860575 /* XavierAppApp.swift */,
+				133FAE7B25D8FFF5006ADE9B /* CloudFilesManager.swift */,
+				1301590525C205C300772C63 /* onboardingPageOne */,
 				A704789F24B6ACE7002D463D /* UserSettings.swift */,
+				13CD9BDE25C776A300463326 /* testinBench.swift */,
 				13DC045B24D3B5BC00F145A2 /* warningView.swift */,
 				13A8B8FF24D3971700AA7E09 /* scheduleData.swift */,
 				A74445AB24AE7871004ECE1B /* CarouselView.swift */,
 				1372591A24A3F60000364C14 /* studentView.swift */,
 				13EF942524CA438E006F898B /* WebView.swift */,
+				131BA70025C73E350074FB89 /* SwiftUIView.swift */,
 				A742AFAE24BD0AD4003B229D /* parentView.swift */,
 				13FEF10124E3217800633410 /* webScrape.swift */,
 				A7687FC924ABB1E4006E1D2D /* cardView.swift */,
@@ -224,6 +256,7 @@
 				1372591224A3F60000364C14 /* Frameworks */,
 				1372591324A3F60000364C14 /* Resources */,
 				A786406401215FCE41F8CF29 /* [CP] Embed Pods Frameworks */,
+				0DE0B428837939DBE74F43A9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -262,6 +295,7 @@
 				1372592E24A3F60100364C14 /* Frameworks */,
 				1372592F24A3F60100364C14 /* Resources */,
 				666BFA2B88109CA8D481416F /* [CP] Embed Pods Frameworks */,
+				33F6584EFAFF4E2FC5E12383 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -322,6 +356,7 @@
 			files = (
 				1372592024A3F60100364C14 /* Preview Assets.xcassets in Resources */,
 				1372591D24A3F60100364C14 /* Assets.xcassets in Resources */,
+				133FAE7725D8FE57006ADE9B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +377,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0DE0B428837939DBE74F43A9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XavierApp/Pods-XavierApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XavierApp/Pods-XavierApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XavierApp/Pods-XavierApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		1579D9DC8923167DF79F3BC8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,6 +414,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33F6584EFAFF4E2FC5E12383 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XavierApp-XavierAppUITests/Pods-XavierApp-XavierAppUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-XavierApp-XavierAppUITests/Pods-XavierApp-XavierAppUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-XavierApp-XavierAppUITests/Pods-XavierApp-XavierAppUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		666BFA2B88109CA8D481416F /* [CP] Embed Pods Frameworks */ = {
@@ -451,20 +520,27 @@
 			files = (
 				A74445AC24AE7871004ECE1B /* CarouselView.swift in Sources */,
 				A742AFAD24BD0213003B229D /* MotherView.swift in Sources */,
+				138D6E6525C8786B00860575 /* XavierAppApp.swift in Sources */,
 				A78BF1E324A404810008C7FC /* OnboardingView.swift in Sources */,
 				13A8B8FC24D3970C00AA7E09 /* test.swift in Sources */,
+				133FAE7C25D8FFF5006ADE9B /* CloudFilesManager.swift in Sources */,
+				1301590A25C206F900772C63 /* purpbleCircle.swift in Sources */,
 				1372591B24A3F60000364C14 /* studentView.swift in Sources */,
 				13DC045C24D3B5BC00F145A2 /* warningView.swift in Sources */,
 				13FEF10224E3217800633410 /* webScrape.swift in Sources */,
+				131BA70125C73E350074FB89 /* SwiftUIView.swift in Sources */,
 				A70478A024B6ACE7002D463D /* UserSettings.swift in Sources */,
 				A742AFAF24BD0AD4003B229D /* parentView.swift in Sources */,
+				13CD9BDF25C776A300463326 /* testinBench.swift in Sources */,
 				13A8B90024D3971700AA7E09 /* scheduleData.swift in Sources */,
-				1372591924A3F60000364C14 /* XavierAppApp.swift in Sources */,
+				1301590125C205B500772C63 /* onboardOneBack.swift in Sources */,
+				1301591925C20FDE00772C63 /* logoOnOne.swift in Sources */,
 				137C381A24A5B7DB002F6D19 /* backgroundView.swift in Sources */,
 				A742AFAB24BD015A003B229D /* ViewRouter.swift in Sources */,
 				13EF942624CA438E006F898B /* WebView.swift in Sources */,
 				A7687FCA24ABB1E4006E1D2D /* cardView.swift in Sources */,
 				13EF942324C941A1006F898B /* menuView.swift in Sources */,
+				1301590F25C2099D00772C63 /* mainTextOnOne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

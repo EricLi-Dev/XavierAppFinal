@@ -25,10 +25,20 @@ class UserSettings: ObservableObject {
             UserDefaults.standard.set(isStudent, forKey: "isStudent")
         }
     }
+//    @Published var events: Data? {
+//        didSet {
+//            UserDefaults.standard.set(events, forKey: "events")
+//        }
+//    }
 
     @Published var viewSwitch: Bool {
         didSet {
             UserDefaults.standard.set(viewSwitch, forKey: "viewSwitch")
+        }
+    }
+    @Published var finishPlus: Bool {
+        didSet {
+            UserDefaults.standard.set(finishPlus, forKey: "finishPlus")
         }
     }
 
@@ -36,9 +46,10 @@ class UserSettings: ObservableObject {
         name = UserDefaults.standard.object(forKey: "name") as? String ?? ""
 
         isParent = UserDefaults.standard.object(forKey: "isParent") as? Bool ?? false
-
         isStudent = UserDefaults.standard.object(forKey: "isStudent") as? Bool ?? false
 
+
         viewSwitch = UserDefaults.standard.object(forKey: "viewSwitch") as? Bool ?? false
+        finishPlus = UserDefaults.standard.object(forKey: "finishPlus") as? Bool ?? false
     }
 }

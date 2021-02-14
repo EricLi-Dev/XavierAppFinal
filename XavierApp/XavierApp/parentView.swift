@@ -14,12 +14,11 @@ struct parentView: View {
     var circleAnimation = Circle()
 
     var body: some View {
-        ZStack{
-            ZStack{
+        ZStack {
+            ZStack {
                 backgroundView()
             }
         GeometryReader { g in
-
 
                 VStack {
                     VStack {
@@ -59,7 +58,7 @@ struct parentView: View {
                                                  ),
                                                  AnyView(
                                                      PPCard()
-                                                 ),
+                                                 )
 
                                              ])
                             }
@@ -69,7 +68,7 @@ struct parentView: View {
                     .frame(width: g.size.width, height: g.size.height / 1.07)
                 }
             }
-        
+
         }
         // .hiddenNavigationBarStyle()
     }

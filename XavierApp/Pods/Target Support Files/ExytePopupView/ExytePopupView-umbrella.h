@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "PopupView.h"
 
 FOUNDATION_EXPORT double ExytePopupViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char ExytePopupViewVersionString[];
